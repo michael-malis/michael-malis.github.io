@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Michael Malis — Data Science Projects</title>
+  <title>Michael Malis — Data Science Portfolio</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -15,39 +15,74 @@
     }
     h1 {
       color: #1a73e8;
+      margin-bottom: 5px;
+    }
+    p.subtitle {
+      font-size: 1.1em;
+      margin-top: 0;
+      color: #555;
     }
     .project {
       background: white;
       border-radius: 10px;
-      padding: 20px;
-      max-width: 600px;
-      margin: 20px auto;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 25px;
+      max-width: 700px;
+      margin: 30px auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: left;
     }
-    a {
-      color: #1a73e8;
+    .project h2 {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      font-size: 1.4em;
+    }
+    .project h2 span {
+      margin-left: 8px;
+    }
+    .project p {
+      line-height: 1.5;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 18px;
+      background: #1a73e8;
+      color: white;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
+      transition: background 0.3s ease;
     }
-    a:hover {
-      text-decoration: underline;
+    a.button:hover {
+      background: #1558b0;
+    }
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #888;
     }
   </style>
 </head>
 <body>
+
   <h1>Michael Malis</h1>
-  <p>Statistics & Data Science Student | Hebrew University</p>
+  <p class="subtitle">Statistics & Data Science Student | Hebrew University</p>
 
   <div class="project">
-    <h2>📊 From Coal to Renewables</h2>
-    <p>An analysis of global energy consumption trends, exploring the shift from fossil fuels to renewable sources.</p>
-    <p><a href="From-Coal-to-Renewables-Analysis-of-Global-Energy-Consumption.html" target="_blank">
+    <h2>📊 <span>From Coal to Renewables</span></h2>
+    <p>
+      An analysis of global energy consumption trends, exploring the shift from fossil fuels to renewable sources.
+      The project covers over 200 countries, tracks historical changes, and visualizes the global transition toward clean energy.
+    </p>
+    <a class="button" href="From-Coal-to-Renewables-Analysis-of-Global-Energy-Consumption.html" target="_blank">
       View Full Report
-    </a></p>
+    </a>
   </div>
 
   <footer>
-    <p>© 2025 Michael Malis</p>
+    © 2025 Michael Malis, Markiel Kaykov
   </footer>
+
 </body>
 </html>
