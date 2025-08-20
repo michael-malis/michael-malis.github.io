@@ -22,6 +22,15 @@
       margin-top: 0;
       color: #555;
     }
+    /* New: section titles */
+    h2.section-title {
+      margin-top: 50px;
+      font-size: 1.6em;
+      color: #1a73e8;
+      border-bottom: 2px solid #1a73e8;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
     .project {
       background: white;
       border-radius: 10px;
@@ -31,13 +40,13 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       text-align: left;
     }
-    .project h2 {
+    .project h2, .project h3 {
       margin-top: 0;
       display: flex;
       align-items: center;
       font-size: 1.4em;
     }
-    .project h2 span {
+    .project h2 span, .project h3 span {
       margin-left: 8px;
     }
     .project p {
@@ -68,8 +77,11 @@
 
   <h1>Michael Malis</h1>
   <p class="subtitle">Statistics & Data Science Student | Hebrew University</p>
-  
-  <!-- First project -->
+
+  <!-- Section: Data Analysis Projects (existing two projects moved here; content untouched) -->
+  <h2 class="section-title">📊 Data Analysis Projects</h2>
+
+  <!-- Data: First project -->
   <div class="project">
     <h2>📊 <span>From Coal to Renewables</span></h2>
     <p>
@@ -81,14 +93,32 @@
     </a>
   </div>
 
-   <!-- Second project -->
+  <!-- Data: Second project -->
   <div class="project">
-    <h2>🔍 <span>Wikipedia Text‑Mining: Women Scientists</span></h2>
+    <h2>🔍 <span>Wikipedia Text-Mining: Women Scientists</span></h2>
     <p>
-      A data science project applying text‑mining techniques to Wikipedia articles on 20th‑century women scientists, 
+      A data science project applying text-mining techniques to Wikipedia articles on 20th-century women scientists, 
       including web scraping, preprocessing, and exploratory analysis of representation trends.
     </p>
     <a class="button" href="Wikipedia text-mining 20th-century women scientists.html" target="_blank">
+      View Full Report
+    </a>
+  </div>
+
+  <!-- Section: Statistical & Probability Studies -->
+  <h2 class="section-title">📐 Statistical & Probability Studies</h2>
+
+  <!-- Stat: First project -->
+  <div class="project">
+    <h3>🎶 <span>Spotify Most-Streamed Songs 2024 — Statistical Analysis</span></h3>
+    <p>
+      Statistical study of the relationship between playlist count and total streams in Spotify’s 2024 most-streamed songs dataset.
+      The analysis includes data cleaning, descriptive statistics (mean, median, percentiles, standard deviation),
+      correlation assessment, simple linear regression, goodness-of-fit evaluation (R²), and inspection of outliers
+      and their impact on model stability and predictive accuracy.
+    </p>
+    <!-- TODO: replace '#' with the actual HTML or PDF link for this project -->
+    <a class="button" href="#" target="_blank">
       View Full Report
     </a>
   </div>
