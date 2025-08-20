@@ -90,6 +90,22 @@
     .contacts a:hover {
       text-decoration: underline;
     }
+    /* Subtle gradient divider line */
+    .section-divider {
+      width: min(92%, 760px);
+      height: 1px;
+      margin: 28px auto 32px;             /* space above/below the line */
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(26, 115, 232, 0.20),
+        rgba(26, 115, 232, 0.45),
+        rgba(26, 115, 232, 0.20),
+        transparent
+      );
+      border: 0;                           /* remove default hr border */
+    }
+
   </style>
 </head>
 <body>
@@ -102,6 +118,9 @@
     📧 <a href="mailto:mykhailo.malis@gmail.com">mykhailo.malis@gmail.com</a> |
     💼 <a href="https://www.linkedin.com/in/michael-malis/" target="_blank" rel="noopener">LinkedIn</a>
   </p>
+
+  <!-- Visual divider between header/contacts and sections -->
+  <hr class="section-divider" aria-hidden="true">
 
   <!-- Section: Data Analysis Projects  -->
   <h2 class="section-title">📊 Data Analysis Projects</h2>
