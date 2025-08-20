@@ -76,6 +76,20 @@
       font-size: 0.9em;
       color: #888;
     }
+        /* Contacts row under the subtitle */
+    .contacts {
+      margin-top: 8px;
+      font-size: 0.98em;        /* slightly smaller than subtitle */
+      color: #555;              /* softer than main text */
+    }
+    .contacts a {
+      color: #4b7fe3;           /* consistent with brand blue */
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contacts a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -83,7 +97,13 @@
   <h1>Michael Malis</h1>
   <p class="subtitle">Statistics & Data Science Student | Hebrew University of Jerusalem</p>
 
-  <!-- Section: Data Analysis Projects (existing two projects moved here; content untouched) -->
+    <!-- Contacts: email + LinkedIn -->
+  <p class="contacts">
+    📧 <a href="mailto:mykhailo.malis@gmail.com">mykhailo.malis@gmail.com</a> |
+    💼 <a href="https://www.linkedin.com/in/michael-malis/" target="_blank" rel="noopener">LinkedIn</a>
+  </p>
+
+  <!-- Section: Data Analysis Projects  -->
   <h2 class="section-title">📊 Data Analysis Projects</h2>
 
   <!-- Data: First project -->
