@@ -2,7 +2,7 @@ export const skillCategories = [
   {
     category: "Programming Languages",
     icon: "💻",
-    skills: ["Python", "R", "JavaScript", "Basic SQL", "VBA", "Bash"]
+    skills: ["Python", "R", "VBA", "Bash"]
   },
   {
     category: "Data Science & ML",

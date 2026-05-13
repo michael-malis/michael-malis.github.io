@@ -19,9 +19,9 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6 py-3 sm:py-3.5">
 
         {/* Logo */}
-        <span className="shrink-0 font-mono text-2xl font-bold tracking-widest sm:text-3xl md:text-3xl lg:text-4xl">
+        <a href="#about" className="shrink-0 font-mono text-2xl font-bold tracking-widest sm:text-3xl md:text-3xl lg:text-4xl">
           <span className="bg-gradient-to-r from-[var(--gradient-lime)] to-[var(--gradient-teal)] bg-clip-text text-transparent">michael.malis</span><span className="cursor-blink bg-gradient-to-r from-[var(--gradient-lime)] to-[var(--gradient-teal)] bg-clip-text text-transparent">_</span>
-        </span>
+        </a>
 
         {/* Desktop nav links — varied green palette */}
         <div className="hidden md:flex flex-wrap gap-1.5 sm:gap-2 ml-4 justify-end">
