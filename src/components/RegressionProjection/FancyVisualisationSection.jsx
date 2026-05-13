@@ -5,7 +5,7 @@ export function FancyVisualisationSection() {
     <section id="fancy-visualisation" className="fancy-visualisation-section">
       <div className="mx-auto px-6 sm:px-8">
         <div className="fancy-visualisation-header">
-          <p className="section-label">// FEATURED TECHNICAL DEMO</p>
+          <p className="section-label">// INTERACTIVE REGRESSION GEOMETRY</p>
           <h2>Linear Regression as Projection</h2>
           <p>
             A small interactive demo of a geometric idea at the heart of modern data science.
@@ -27,7 +27,7 @@ export function FancyVisualisationSection() {
             <h3 className="regression-math-title">ΔLGEBRΔIC DERIVΔTION</h3>
 
             <div className="regression-formula">
-              <span className="math-sym-y"><em>y</em></span> = <span className="math-sym-x"><em>X</em></span>{' '}<span className="math-sym-beta">β</span> + <span className="math-sym-eps">ε</span>
+              <span className="math-sym-y"><em>y</em></span><span className="math-sym-x"> = </span><span className="math-sym-x"><em>X</em></span>{' '}<span className="math-sym-beta">β</span> + <span className="math-sym-eps">ε</span>
             </div>
             <ul className="regression-math-list">
               <li><span className="regression-math-symbol math-sym-y"><em>Y</em></span> observed response</li>
@@ -37,28 +37,28 @@ export function FancyVisualisationSection() {
             </ul>
 
             <div className="regression-formula">
-              <span className="math-sym-x">span(<em>X</em>)</span> = &#123;<span className="math-sym-x"><em>x</em><sub>i</sub></span>, <span className="math-sym-x"><em>x</em><sub>j</sub></span>&#125;
+              <span className="math-sym-x">span(<em>X</em>)</span><span className="math-sym-x"> = </span><span className="math-sym-x">&#123;</span><span className="math-sym-x"><em>x</em><sub>i</sub></span><span className="math-sym-x">, </span><span className="math-sym-x"><em>x</em><sub>j</sub></span><span className="math-sym-x">&#125;</span>
             </div>
-            <p className="regression-formula-note">all linear combos of columns of X</p>
+            <p className="regression-formula-note">column space of X</p>
 
             <div className="regression-formula">
-              <span className="regression-betahat math-sym-beta">β<span className="regression-betahat-hat">ˆ</span></span> = (<span className="math-sym-x"><em>X</em></span><sup>T</sup><span className="math-sym-x"><em>X</em></span>)<sup>−1</sup><span className="math-sym-x"><em>X</em></span><sup>T</sup><span className="math-sym-y"><em>y</em></span>
+              <span className="regression-betahat math-sym-beta">β<span className="regression-betahat-hat">ˆ</span></span><span className="math-sym-x"> = (</span><span className="math-sym-x"><em>X</em></span><sup>T</sup><span className="math-sym-x"><em>X</em></span><span className="math-sym-x">)</span><sup className="math-sym-x">−1</sup><span className="math-sym-x"><em>X</em></span><sup>T</sup><span className="math-sym-y"><em>y</em></span>
             </div>
-            <p className="regression-formula-note">least-squares estimate (<em>X</em><sup>T</sup><em>X</em> invertible)</p>
+            <p className="regression-formula-note">LS estimate, XᵀX invertible</p>
 
             <div className="regression-formula">
-              <span className="math-sym-yhat"><em>ŷ</em></span> = <span className="math-sym-x"><em>P</em><sub>X</sub></span>{' '}<span className="math-sym-y"><em>y</em></span>
+              <span className="math-sym-yhat"><em>ŷ</em></span><span className="math-sym-x"> = </span><span className="math-sym-x"><em>P</em><sub>X</sub></span>{' '}<span className="math-sym-y"><em>y</em></span>
             </div>
             <div className="regression-formula">
-              <span className="math-sym-x"><em>P</em><sub>X</sub></span> = <span className="math-sym-x"><em>X</em></span>(<span className="math-sym-x"><em>X</em></span><sup>T</sup><span className="math-sym-x"><em>X</em></span>)<sup>−1</sup><span className="math-sym-x"><em>X</em></span><sup>T</sup>
+              <span className="math-sym-x"><em>P</em><sub>X</sub></span><span className="math-sym-x"> = </span><span className="math-sym-x"><em>X</em></span><span className="math-sym-x">(</span><span className="math-sym-x"><em>X</em></span><sup>T</sup><span className="math-sym-x"><em>X</em></span><span className="math-sym-x">)</span><sup className="math-sym-x">−1</sup><span className="math-sym-x"><em>X</em></span><sup>T</sup>
             </div>
             <p className="regression-formula-note">projection onto span(X)</p>
 
             <div className="regression-formula">
-              <span className="math-sym-eps">ε</span> = <span className="math-sym-y"><em>y</em></span> − <span className="math-sym-yhat"><em>ŷ</em></span>
+              <span className="math-sym-eps">ε</span><span className="math-sym-x"> = </span><span className="math-sym-y"><em>y</em></span><span className="math-sym-x"> − </span><span className="math-sym-yhat"><em>ŷ</em></span>
             </div>
             <div className="regression-formula">
-              <span className="math-sym-x"><em>X</em></span><sup>T</sup><span className="math-sym-eps">ε</span> = 0
+              <span className="math-sym-x"><em>X</em></span><sup>T</sup><span className="math-sym-eps">ε</span><span className="math-sym-x"> = 0</span>
             </div>
             <p className="regression-formula-note">residual is orthogonal to span(X)</p>
           </aside>

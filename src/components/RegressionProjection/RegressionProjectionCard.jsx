@@ -1,4 +1,4 @@
-import { useState, useCallback, Suspense, useMemo } from 'react';
+import { useState, useCallback, useEffect, Suspense, useMemo } from 'react';
 import * as THREE from 'three';
 import { RegressionProjectionScene } from './RegressionProjectionScene';
 import { CanvasErrorBoundary } from './CanvasErrorBoundary';
@@ -18,6 +18,11 @@ const LEGEND_ITEMS = [
 export function RegressionProjectionCard() {
   const isMobileView = useIsMobile();
   const [focusTarget, setFocusTarget] = useState(null);
+  const [legendOpen, setLegendOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isMobileView) setLegendOpen(false);
+  }, [isMobileView]);
   const [x1State, setX1State] = useState(DEFAULT_X1);
   const [x2State, setX2State] = useState(DEFAULT_X2);
   const [yState, setYState] = useState(DEFAULT_Y);
@@ -61,16 +66,36 @@ export function RegressionProjectionCard() {
     >
       <div className="regression-card-header">
         <p>// residual orthogonality</p>
+        <div className="regression-equation">
+          <span className="white">y</span>
+          <span className="gray">=</span>
+          <span className="green">ŷ</span>
+          <span className="gray">+</span>
+          <span className="orange">ε</span>
+        </div>
+        {isMobileView && (
+          <button
+            type="button"
+            className="regression-legend-toggle"
+            onClick={() => setLegendOpen(prev => !prev)}
+            aria-label={legendOpen ? 'Hide vector legend' : 'Show vector legend'}
+            aria-expanded={legendOpen}
+          >
+            ℹ
+          </button>
+        )}
       </div>
 
-      <div className="regression-legend" aria-label="Scene legend">
-        {LEGEND_ITEMS.map((item, i) => (
-          <div key={i} className="regression-legend-item">
-            <span className={`regression-legend-swatch ${item.cls}`} />
-            <span><span className={item.symCls}>{item.sym}</span>{' '}{item.desc}</span>
-          </div>
-        ))}
-      </div>
+      {(!isMobileView || legendOpen) && (
+        <div className="regression-legend" aria-label="Scene legend">
+          {LEGEND_ITEMS.map((item, i) => (
+            <div key={i} className="regression-legend-item">
+              <span className={`regression-legend-swatch ${item.cls}`} />
+              <span><span className={item.symCls}>{item.sym}</span>{' '}{item.desc}</span>
+            </div>
+          ))}
+        </div>
+      )}
 
       <CanvasErrorBoundary>
         <Suspense fallback={
@@ -90,14 +115,6 @@ export function RegressionProjectionCard() {
           />
         </Suspense>
       </CanvasErrorBoundary>
-
-      <div className="regression-equation">
-        <span className="white">y</span>
-        <span className="gray">=</span>
-        <span className="green">ŷ</span>
-        <span className="gray">+</span>
-        <span className="orange">ε</span>
-      </div>
 
       <div className="regression-card-footer">
         {[

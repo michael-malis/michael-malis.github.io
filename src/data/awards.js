@@ -10,7 +10,7 @@ export const awards = [
       "Worked with the team on connecting the software side of the project to an electronic sound-output component.",
       "Participated in building and presenting a working demo under hackathon time pressure.",
     ],
-    link: "TEAM_REPOSITORY_LINK_HERE",
+    link: "https://github.com/Zer0Hiro/JAM-web-edition",
     buttonText: "View Team Repository",
     tags: [
       "Hackathon",
