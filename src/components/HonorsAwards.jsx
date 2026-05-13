@@ -13,7 +13,7 @@ export default function HonorsAwards() {
           <div className="h-px w-10 shrink-0 bg-gradient-to-r from-[#78b83f] to-[#2bb67f]" />
           <h2 className="heading-main">Recognition</h2>
         </div>
-        <p className="mt-4 max-w-2xl text-sm text-[#d7dee8]">
+        <p className="mt-4 max-w-2xl text-sm text-[var(--color-text-secondary)]">
           Achievements and recognition for excellence in data science and machine learning projects.
         </p>
 
@@ -30,8 +30,11 @@ export default function HonorsAwards() {
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
                   {/* Badge label */}
-                  <span className="inline-flex items-center gap-1.5 rounded-full border border-[rgba(52,211,153,0.22)] bg-[rgba(52,211,153,0.06)] px-3 py-1 font-mono text-xs uppercase tracking-widest text-[#9aad8f]">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#9aad8f]" />
+                  <span
+                    className="inline-flex items-center gap-1.5 rounded-full border border-[rgba(52,211,153,0.22)] bg-[rgba(52,211,153,0.06)] px-3 py-1 font-mono text-xs uppercase tracking-widest text-[#C9A94A]"
+                    style={{ textShadow: '0 0 10px rgba(201, 169, 74, 0.22)' }}
+                  >
+                    <span className="h-1.5 w-1.5 rounded-full bg-[rgba(201,169,74,0.65)]" />
                     🏆 Achievement
                   </span>
 
@@ -72,7 +75,7 @@ export default function HonorsAwards() {
                   href={award.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-cta shrink-0"
+                  className="btn-secondary shrink-0"
                 >
                   {award.buttonText}
                 </a>

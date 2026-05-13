@@ -26,7 +26,7 @@ export default function Education() {
                 {/* Degree — solid #34d399 second-level, NOT gradient, smaller than institution */}
                 <p
                   className="mt-1.5 text-base font-semibold"
-                  style={{ color: '#34d399' }}
+                  style={{ color: 'var(--accent-primary)' }}
                 >
                   B.Sc. in Data Science &amp; Statistics
                 </p>

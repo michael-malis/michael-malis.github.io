@@ -17,7 +17,7 @@ export default function About() {
 
           {/* Left Column — Bio */}
           <div className="flex flex-col justify-center space-y-5">
-            <p className="text-base leading-relaxed text-[var(--color-text-secondary)]">
+            <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
               I'm a Statistics, Data Science, and Machine Learning student passionate about transforming data into actionable insights.
             </p>
             <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">

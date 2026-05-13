@@ -73,7 +73,7 @@ export default function Skills() {
               background: 'rgba(52, 211, 153, 0.08)',
               border: '1.5px solid rgba(52, 211, 153, 0.25)',
               color: '#2bb67f',
-              letterSpacing: '0.3px'
+              letterSpacing: 'var(--tracking-mono)'
             }}
           >
             <span className="terminal-blink h-2 w-2 rounded-full bg-[#34d399]" />

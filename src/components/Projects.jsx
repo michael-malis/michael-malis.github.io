@@ -19,7 +19,7 @@ export default function Projects() {
           <div className="h-px w-10 shrink-0 bg-gradient-to-r from-[#78b83f] to-[#2bb67f]" />
           <h2 className="heading-main">Selected Works</h2>
         </div>
-        <p className="mt-4 max-w-2xl text-sm text-[#d7dee8]">
+        <p className="mt-4 max-w-2xl text-sm text-[var(--color-text-secondary)]">
           Data analysis, statistical modeling, and machine learning projects showcasing practical applications.
         </p>
 
@@ -28,7 +28,7 @@ export default function Projects() {
             <div key={section.title}>
               {/* Sub-section header */}
               <div className="flex items-center gap-4">
-                <span className="shrink-0 rounded-md border border-[rgba(52,211,153,0.22)] bg-[rgba(52,211,153,0.06)] px-3 py-1.5 font-mono text-xs uppercase tracking-wider text-[#9aad8f]">
+                <span className="shrink-0 rounded-md border border-[rgba(52,211,153,0.22)] bg-[rgba(52,211,153,0.06)] px-3 py-1.5 font-mono text-xs uppercase tracking-widest text-[var(--text-muted)]">
                   {SECTION_LABELS[section.title] ?? section.title.toUpperCase()}
                 </span>
                 <div className="h-px flex-1 bg-gradient-to-r from-[rgba(52,211,153,0.2)] to-transparent" />

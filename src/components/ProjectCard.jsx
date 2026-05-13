@@ -58,7 +58,7 @@ export default function ProjectCard({ project }) {
         href={project.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="btn-cta mt-5 self-start"
+        className="btn-secondary mt-5 self-start"
       >
         {project.buttonText}
       </a>

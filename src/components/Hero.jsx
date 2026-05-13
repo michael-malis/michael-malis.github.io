@@ -23,14 +23,13 @@ export default function Hero() {
                 <div className="mb-5 h-0.5 w-16 bg-gradient-to-r from-[#34d399] via-[#2bb67f] to-transparent" />
 
                 {/* Main heading */}
-                <h1 className="text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
+                <h1>
                   <span className="bg-gradient-to-r from-[#78b83f] to-[#2bb67f] bg-clip-text text-transparent">Michael Malis</span>
                 </h1>
 
                 {/* Subtitle */}
                 <p
-                  className="mt-2 text-base font-medium"
-                  style={{ color: '#34d399', fontSize: '1.0625rem' }}
+                  className="mt-2 text-base font-medium text-[var(--accent-primary)]"
                 >
                   Statistics &amp; Data Science Student · Hebrew University of Jerusalem
                 </p>
