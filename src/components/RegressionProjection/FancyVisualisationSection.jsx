@@ -12,7 +12,7 @@ export function FancyVisualisationSection() {
           </p>
           <p className="fancy-visualisation-caption">
             <strong className="regression-note-label">note:</strong>{' '}
-            drag <span className="math-var">y</span>, <span className="math-var">x<sub>i</sub></span>, and <span className="math-var">x<sub>j</sub></span> to explore the geometry.
+            drag <span className="math-var">y</span>, <span className="math-var">x<sub>i</sub></span>, and <span className="math-var">x<sub>j</sub></span> to explore.
           </p>
         </div>
 
