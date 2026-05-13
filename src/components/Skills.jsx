@@ -63,7 +63,7 @@ export default function Skills() {
 
         {/* Bottom area */}
         <div className="mt-12 text-center">
-          <p className="mb-6 text-sm text-[var(--color-text-muted)] skills-closing-line">
+          <p className="mb-6 text-sm text-[var(--color-text-muted)]">
             Always learning, always building.
           </p>
           {/* Badge — pill style, intentional */}

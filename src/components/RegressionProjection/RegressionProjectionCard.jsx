@@ -21,7 +21,7 @@ export function RegressionProjectionCard() {
   const [legendOpen, setLegendOpen] = useState(false);
 
   useEffect(() => {
-    if (!isMobileView) setLegendOpen(false);
+    if (!isMobileView) setLegendOpen(false); // eslint-disable-line react-hooks/set-state-in-effect
   }, [isMobileView]);
   const [x1State, setX1State] = useState(DEFAULT_X1);
   const [x2State, setX2State] = useState(DEFAULT_X2);

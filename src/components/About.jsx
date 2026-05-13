@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section className="border-b border-[var(--color-border)] px-6 py-10 sm:py-14 lg:py-16">
+    <section id="about-me" className="scroll-mt-20 border-b border-[var(--color-border)] px-6 py-10 sm:py-14 lg:py-16">
       <div className="mx-auto max-w-6xl">
 
         {/* Section label */}
@@ -24,7 +24,7 @@ export default function About() {
               With a strong foundation in statistical analysis, predictive modeling, and programming, I focus on solving real-world problems through data-driven decision-making. My work spans from exploratory analysis to production-ready ML systems.
             </p>
             <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
-              I'm particularly interested in time series forecasting, causal inference, and building scalable data pipelines. When I'm not coding, I'm exploring new methodologies or contributing to open-source projects.
+              I'm particularly interested in time series forecasting, causal inference, and building scalable data pipelines. When I'm not coding, I'm exploring new methodologies or working on personal projects.
             </p>
           </div>
 
@@ -32,7 +32,7 @@ export default function About() {
           <div className="space-y-4">
             <div className="card-base p-5">
               <h3 className="mb-2 text-sm font-semibold text-[var(--gradient-teal)]">
-                📊 Specialization
+                Specialization
               </h3>
               <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
                 Statistical inference, predictive modeling, data visualization, and ML system design
@@ -41,7 +41,7 @@ export default function About() {
 
             <div className="card-base p-5">
               <h3 className="mb-2 text-sm font-semibold text-[var(--gradient-teal)]">
-                🎓 Education
+                Education
               </h3>
               <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
                 Hebrew University of Jerusalem · B.Sc. in Data Science &amp; Statistics
@@ -50,7 +50,7 @@ export default function About() {
 
             <div className="card-base p-5">
               <h3 className="mb-2 text-sm font-semibold text-[var(--gradient-teal)]">
-                💡 Mission
+                Mission
               </h3>
               <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
                 Make data science accessible and impactful through clean code and clear communication
