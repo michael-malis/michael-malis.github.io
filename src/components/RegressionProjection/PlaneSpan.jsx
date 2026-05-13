@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { useMemo } from 'react';
 import { Text } from '@react-three/drei';
-import { getPlaneNormal, isValidPlane } from './RegressionMath';
+import { getPlaneNormal, isValidPlane, VECTOR_COLORS } from './RegressionMath';
 
 const PLANE_SIZE = 8;
 const DEFAULT_NORMAL = new THREE.Vector3(0, 0, 1);
@@ -52,9 +52,9 @@ export function PlaneSpan({ x1, x2 }) {
       <mesh quaternion={planeQuat}>
         <planeGeometry args={[PLANE_SIZE, PLANE_SIZE]} />
         <meshBasicMaterial
-          color={0x10b981}
+          color={VECTOR_COLORS.x}
           transparent
-          opacity={0.075}
+          opacity={0.18}
           side={THREE.DoubleSide}
           depthWrite={false}
         />

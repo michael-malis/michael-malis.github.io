@@ -2,8 +2,8 @@
 
 const navLinks = [
   { href: '#about', label: 'About', className: 'nav-link nav-link-about' },
-  { href: '#skills', label: 'Skills', className: 'nav-link nav-link-skills' },
   { href: '#projects', label: 'Projects', className: 'nav-link nav-link-projects' },
+  { href: '#skills', label: 'Skills', className: 'nav-link nav-link-skills' },
   { href: '#contact', label: 'Contact', className: 'nav-link nav-link-contact' },
 ];
 

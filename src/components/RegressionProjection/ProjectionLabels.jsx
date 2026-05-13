@@ -1,17 +1,20 @@
 import * as THREE from 'three';
-import { Billboard, Text, Html } from '@react-three/drei';
+import { Html } from '@react-three/drei';
 import { VECTOR_COLORS } from './RegressionMath';
 
 export function ProjectionLabels({ yPoint, yHatPoint, residual, x1, x2, isMobileView }) {
-  const sz = isMobileView ? 0.22 : 0.25;
+  const x1LabelPos = x1.clone().multiplyScalar(0.8).add(new THREE.Vector3(0.0, 0.32, 0.0));
+  const x2LabelPos = x2.clone().multiplyScalar(0.8).add(new THREE.Vector3(0.0, 0.32, 0.0));
 
-  const x1LabelPos = x1.clone().multiplyScalar(0.5).add(new THREE.Vector3(0.0, 0.32, 0.0));
-  const x2LabelPos = x2.clone().multiplyScalar(0.5).add(new THREE.Vector3(0.0, 0.32, 0.0));
+  const yLabelPos = yPoint.clone().multiplyScalar(0.5).add(new THREE.Vector3(0.15, 0.0, -0.12));
+  const yHatLabelPos = yHatPoint.clone().multiplyScalar(0.75).add(new THREE.Vector3(-0.22, -0.1, 0.12));
+  const epsilonLabelPos = yHatPoint.clone()
+    .add(residual.clone().multiplyScalar(0.5))
+    .add(new THREE.Vector3(0.15, 0.0, -0.10));
 
-  const htmlStyle = {
-    color: VECTOR_COLORS.x,
+  const baseStyle = {
     fontFamily: "'Courier New', monospace",
-    fontSize: isMobileView ? '12px' : '13px',
+    fontSize: isMobileView ? '10px' : '10px',
     fontWeight: '600',
     pointerEvents: 'none',
     whiteSpace: 'nowrap',
@@ -19,52 +22,28 @@ export function ProjectionLabels({ yPoint, yHatPoint, residual, x1, x2, isMobile
     lineHeight: '1',
   };
 
-  const yLabelPos = yPoint.clone().multiplyScalar(0.5).add(new THREE.Vector3(0.30, 0.0, -0.25));
-  const yHatLabelPos = yHatPoint.clone().multiplyScalar(0.5).add(new THREE.Vector3(0.28, 0.22, -0.18));
-  const epsilonLabelPos = yHatPoint.clone()
-    .add(residual.clone().multiplyScalar(0.5))
-    .add(new THREE.Vector3(0.30, 0.0, -0.20));
-
   return (
     <group>
-      <Billboard position={yLabelPos}>
-        <Text
-          fontSize={isMobileView ? 0.23 : 0.27}
-          color={VECTOR_COLORS.y}
-          anchorX="center"
-          anchorY="middle"
-          renderOrder={100}
-        >y</Text>
-      </Billboard>
+      <Html position={yLabelPos} center distanceFactor={10} zIndexRange={[50, 60]}>
+        <span style={{ ...baseStyle, color: VECTOR_COLORS.y }}>y</span>
+      </Html>
 
-      <Billboard position={yHatLabelPos}>
-        <Text
-          fontSize={sz}
-          color={VECTOR_COLORS.yhat}
-          anchorX="center"
-          anchorY="middle"
-          renderOrder={100}
-        >ŷ</Text>
-      </Billboard>
+      <Html position={yHatLabelPos} center distanceFactor={10} zIndexRange={[50, 60]}>
+        <span style={{ ...baseStyle, color: VECTOR_COLORS.yhat }}>ŷ</span>
+      </Html>
 
       {residual.length() > 0.01 && (
-        <Billboard position={epsilonLabelPos}>
-          <Text
-            fontSize={sz}
-            color={VECTOR_COLORS.epsilon}
-            anchorX="center"
-            anchorY="middle"
-            renderOrder={100}
-          >ε</Text>
-        </Billboard>
+        <Html position={epsilonLabelPos} center distanceFactor={10} zIndexRange={[50, 60]}>
+          <span style={{ ...baseStyle, color: VECTOR_COLORS.epsilon }}>ε</span>
+        </Html>
       )}
 
       <Html position={x1LabelPos} center distanceFactor={10} zIndexRange={[50, 60]}>
-        <span style={htmlStyle}>x<sub>i</sub></span>
+        <span style={{ ...baseStyle, color: VECTOR_COLORS.x }}>x<sub>i</sub></span>
       </Html>
 
       <Html position={x2LabelPos} center distanceFactor={10} zIndexRange={[50, 60]}>
-        <span style={htmlStyle}>x<sub>j</sub></span>
+        <span style={{ ...baseStyle, color: VECTOR_COLORS.x }}>x<sub>j</sub></span>
       </Html>
     </group>
   );

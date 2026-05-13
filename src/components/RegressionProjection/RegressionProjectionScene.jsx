@@ -15,7 +15,7 @@ function CameraController({ controlsRef, focusTarget, isMobileView, yHatPoint, y
   const targetLook = useRef(null);
 
   const defaultPos = useMemo(
-    () => isMobileView ? new THREE.Vector3(3.8, 2.4, 4.8) : new THREE.Vector3(4.5, 2.8, 5.5),
+    () => isMobileView ? new THREE.Vector3(3.8, 3.2, 5.5) : new THREE.Vector3(4.5, 4.0, 6.5),
     [isMobileView]
   );
 
@@ -46,15 +46,15 @@ function CameraController({ controlsRef, focusTarget, isMobileView, yHatPoint, y
 
     const presets = {
       y: {
-        pos: isMobileView ? new THREE.Vector3(2.2, 2.4, 3.6) : new THREE.Vector3(2.6, 2.6, 4.0),
+        pos: isMobileView ? new THREE.Vector3(3.0, 3.0, 4.8) : new THREE.Vector3(3.5, 3.5, 5.5),
         look: yMid,
       },
       yhat: {
-        pos: isMobileView ? new THREE.Vector3(2.6, 1.6, 3.4) : new THREE.Vector3(3.0, 1.8, 3.8),
+        pos: isMobileView ? new THREE.Vector3(3.3, 2.2, 4.5) : new THREE.Vector3(3.8, 2.5, 5.2),
         look: yHatMid,
       },
       residual: {
-        pos: isMobileView ? new THREE.Vector3(2.0, 2.2, 3.2) : new THREE.Vector3(2.4, 2.6, 3.8),
+        pos: isMobileView ? new THREE.Vector3(2.8, 2.8, 4.5) : new THREE.Vector3(3.2, 3.2, 5.2),
         look: eMid,
       },
     };
@@ -109,8 +109,8 @@ function CameraController({ controlsRef, focusTarget, isMobileView, yHatPoint, y
       rotateSpeed={isMobileView ? 0.45 : 0.65}
       zoomSpeed={0.7}
       minDistance={2}
-      maxDistance={8}
-      autoRotateSpeed={0.5}
+      maxDistance={9}
+      autoRotateSpeed={0.2}
     />
   );
 }
@@ -143,7 +143,7 @@ export function RegressionProjectionScene({ isMobileView, focusTarget, x1, x2, y
     <div className="regression-canvas-wrap">
       <Canvas
         camera={{
-          position: isMobileView ? [3.8, 2.4, 4.8] : [4.5, 2.8, 5.5],
+          position: isMobileView ? [3.8, 3.2, 5.5] : [4.5, 4.0, 6.5],
           fov: isMobileView ? 50 : 40,
         }}
         dpr={isMobileView ? [1, 1] : [1, 1.5]}

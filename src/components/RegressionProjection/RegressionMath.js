@@ -3,9 +3,9 @@ import * as THREE from 'three';
 export const Y_VEC = new THREE.Vector3(1.15, 1.7, 0.95);
 
 export const VECTOR_COLORS = {
-  y:       '#EDF4F0',
+  y:       '#c4eb19',
   x:       '#9FB1B7',
-  yhat:    '#6BE39A',
+  yhat:    'rgb(61, 227, 127)',
   epsilon: '#F27663',
 };
 
