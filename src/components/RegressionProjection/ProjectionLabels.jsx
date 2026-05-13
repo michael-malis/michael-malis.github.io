@@ -38,13 +38,17 @@ export function ProjectionLabels({ yPoint, yHatPoint, residual, x1, x2, isMobile
         </Html>
       )}
 
-      <Html position={x1LabelPos} center distanceFactor={10} zIndexRange={[50, 60]}>
-        <span style={{ ...baseStyle, color: VECTOR_COLORS.x }}>x<sub>i</sub></span>
-      </Html>
+      {!isMobileView && (
+        <Html position={x1LabelPos} center distanceFactor={10} zIndexRange={[50, 60]}>
+          <span style={{ ...baseStyle, color: VECTOR_COLORS.x }}>x<sub>i</sub></span>
+        </Html>
+      )}
 
-      <Html position={x2LabelPos} center distanceFactor={10} zIndexRange={[50, 60]}>
-        <span style={{ ...baseStyle, color: VECTOR_COLORS.x }}>x<sub>j</sub></span>
-      </Html>
+      {!isMobileView && (
+        <Html position={x2LabelPos} center distanceFactor={10} zIndexRange={[50, 60]}>
+          <span style={{ ...baseStyle, color: VECTOR_COLORS.x }}>x<sub>j</sub></span>
+        </Html>
+      )}
     </group>
   );
 }
