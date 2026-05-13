@@ -10,7 +10,7 @@ export default function HonorsAwards() {
 
         {/* Section heading */}
         <div className="mt-3 flex items-center gap-4">
-          <div className="h-px w-10 shrink-0 bg-gradient-to-r from-[#78b83f] to-[#2bb67f]" />
+          <div className="h-px w-10 shrink-0 bg-gradient-to-r from-[var(--gradient-lime)] to-[var(--gradient-teal)]" />
           <h2 className="heading-main">Recognition</h2>
         </div>
         <p className="mt-4 max-w-2xl text-sm text-[var(--color-text-secondary)]">
@@ -24,22 +24,21 @@ export default function HonorsAwards() {
               className="card-featured relative"
             >
               {/* Top accent line */}
-              <div className="relative mb-6 h-0.5 w-32 bg-gradient-to-r from-[#34d399] via-[#2bb67f] to-transparent rounded" />
+              <div className="relative mb-6 h-0.5 w-32 bg-gradient-to-r from-[var(--accent-primary)] via-[var(--gradient-teal)] to-transparent rounded" />
 
               {/* Header */}
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
                   {/* Badge label */}
                   <span
-                    className="inline-flex items-center gap-1.5 rounded-full border border-[rgba(52,211,153,0.22)] bg-[rgba(52,211,153,0.06)] px-3 py-1 font-mono text-xs uppercase tracking-widest text-[#C9A94A]"
-                    style={{ textShadow: '0 0 10px rgba(201, 169, 74, 0.22)' }}
+                    className="award-achievement-badge inline-flex items-center gap-1.5 rounded-full border border-[rgba(52,211,153,0.22)] bg-[rgba(52,211,153,0.06)] px-3 py-1 font-mono text-xs uppercase tracking-widest"
                   >
-                    <span className="h-1.5 w-1.5 rounded-full bg-[rgba(201,169,74,0.65)]" />
+                    <span className="award-achievement-badge-dot h-1.5 w-1.5 rounded-full" />
                     🏆 Achievement
                   </span>
 
                   {/* Primary headline */}
-                  <h3 className="mt-4 text-3xl font-bold tracking-tight text-[#34d399] sm:text-4xl">
+                  <h3 className="mt-4 text-3xl font-bold tracking-tight text-[var(--accent-primary)] sm:text-4xl">
                     1st Place Hackathon Award — {award.title.replace("Hackathon Award — ", "")}
                   </h3>
                 </div>
@@ -55,7 +54,7 @@ export default function HonorsAwards() {
               <ul className="mt-6 grid gap-3 sm:grid-cols-2">
                 {award.details.map((detail, i) => (
                   <li key={i} className="flex gap-3 text-sm text-[var(--color-text-secondary)]">
-                    <span className="shrink-0 font-mono font-bold text-[#78b83f]">+</span>
+                    <span className="shrink-0 font-mono font-bold text-[var(--gradient-lime)]">+</span>
                     <span>{detail}</span>
                   </li>
                 ))}

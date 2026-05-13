@@ -16,7 +16,7 @@ export default function Projects() {
 
         {/* Section heading */}
         <div className="mt-3 flex items-center gap-4">
-          <div className="h-px w-10 shrink-0 bg-gradient-to-r from-[#78b83f] to-[#2bb67f]" />
+          <div className="h-px w-10 shrink-0 bg-gradient-to-r from-[var(--gradient-lime)] to-[var(--gradient-teal)]" />
           <h2 className="heading-main">Selected Works</h2>
         </div>
         <p className="mt-4 max-w-2xl text-sm text-[var(--color-text-secondary)]">

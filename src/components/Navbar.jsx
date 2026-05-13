@@ -20,7 +20,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <span className="shrink-0 font-mono text-2xl font-bold tracking-widest sm:text-3xl md:text-3xl lg:text-4xl">
-          <span className="bg-gradient-to-r from-[#78b83f] to-[#2bb67f] bg-clip-text text-transparent">michael.malis</span><span className="cursor-blink bg-gradient-to-r from-[#78b83f] to-[#2bb67f] bg-clip-text text-transparent">_</span>
+          <span className="bg-gradient-to-r from-[var(--gradient-lime)] to-[var(--gradient-teal)] bg-clip-text text-transparent">michael.malis</span><span className="cursor-blink bg-gradient-to-r from-[var(--gradient-lime)] to-[var(--gradient-teal)] bg-clip-text text-transparent">_</span>
         </span>
 
         {/* Desktop nav links — varied green palette */}
@@ -34,7 +34,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger button */}
         <button
-          className="md:hidden flex flex-col gap-1.5 w-10 h-10 items-center justify-center focus:outline-none"
+          className="md:hidden flex flex-col gap-1.5 w-11 h-11 min-w-[44px] min-h-[44px] items-center justify-center focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle mobile menu"
           aria-expanded={isMenuOpen}

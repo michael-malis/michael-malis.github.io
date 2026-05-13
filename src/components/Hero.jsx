@@ -1,4 +1,4 @@
-import avatar from "../assets/profile-avatar.png";
+import avatar from "../assets/profile-avatar.webp";
 
 export default function Hero() {
   return (
@@ -13,18 +13,18 @@ export default function Hero() {
         {/* Profile Card - standalone */}
         <div className="profile-card relative overflow-hidden rounded-2xl border border-[rgba(52,211,153,0.28)] bg-[var(--color-elevated)] p-7 shadow-lg sm:p-9 lg:p-10 transition-all duration-300 hover:border-[rgba(52,211,153,0.4)] hover:shadow-[0_12px_40px_rgba(52,211,153,0.1)] hover:bg-[rgba(14,33,25,0.8)]">
           {/* Left accent bar */}
-          <div className="absolute left-0 top-0 h-full w-1 rounded-l-2xl bg-gradient-to-b from-[#34d399] via-[#2bb67f] to-transparent" />
+          <div className="absolute left-0 top-0 h-full w-1 rounded-l-2xl bg-gradient-to-b from-[var(--accent-primary)] via-[var(--gradient-teal)] to-transparent" />
 
           {/* Content */}
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 lg:items-start">
 
             {/* Text content */}
             <div className="min-w-0 flex-1 lg:order-1">
-                <div className="mb-5 h-0.5 w-16 bg-gradient-to-r from-[#34d399] via-[#2bb67f] to-transparent" />
+                <div className="mb-5 h-0.5 w-16 bg-gradient-to-r from-[var(--accent-primary)] via-[var(--gradient-teal)] to-transparent" />
 
                 {/* Main heading */}
                 <h1>
-                  <span className="bg-gradient-to-r from-[#78b83f] to-[#2bb67f] bg-clip-text text-transparent">Michael Malis</span>
+                  <span className="bg-gradient-to-r from-[var(--gradient-lime)] to-[var(--gradient-teal)] bg-clip-text text-transparent">Michael Malis</span>
                 </h1>
 
                 {/* Subtitle */}
@@ -37,19 +37,19 @@ export default function Hero() {
                 {/* Meta rows */}
                 <div className="mt-7 space-y-2.5 font-mono text-sm">
                   <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
-                    <span className="shrink-0 font-semibold text-[#78b83f]">role:</span>
+                    <span className="shrink-0 font-semibold text-[var(--gradient-lime)]">role:</span>
                     <span className="text-[var(--color-text-secondary)]">Statistics &amp; Data Science</span>
                   </div>
                   <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
-                    <span className="shrink-0 font-semibold text-[#78b83f]">education:</span>
+                    <span className="shrink-0 font-semibold text-[var(--gradient-lime)]">education:</span>
                     <span className="text-[var(--color-text-secondary)]">Hebrew University</span>
                   </div>
                   <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
-                    <span className="shrink-0 font-semibold text-[#78b83f]">focus:</span>
+                    <span className="shrink-0 font-semibold text-[var(--gradient-lime)]">focus:</span>
                     <span className="text-[var(--color-text-secondary)]">ML · Statistics · Data</span>
                   </div>
                   <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
-                    <span className="shrink-0 font-semibold text-[#78b83f]">location:</span>
+                    <span className="shrink-0 font-semibold text-[var(--gradient-lime)]">location:</span>
                     <span className="text-[var(--color-text-secondary)]">Jerusalem</span>
                   </div>
                 </div>
@@ -63,7 +63,7 @@ export default function Hero() {
                     <span className="shrink-0 font-semibold text-[var(--color-muted-green)]">EMAIL:</span>
                     <a
                       href="mailto:mykhailo.malis@gmail.com"
-                      className="break-all font-semibold text-[#34d399] underline decoration-[#34d399]/35 underline-offset-2 transition hover:text-[#2bb67f] hover:decoration-[#2bb67f] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgba(52,211,153,0.5)]"
+                      className="break-all font-semibold text-[var(--accent-primary)] underline decoration-[#34d399]/35 underline-offset-2 transition hover:text-[var(--gradient-teal)] hover:decoration-[var(--gradient-teal)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgba(52,211,153,0.5)]"
                     >
                       mykhailo.malis@gmail.com
                     </a>
@@ -74,7 +74,7 @@ export default function Hero() {
                       href="https://www.linkedin.com/in/michael-malis/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-semibold text-[#34d399] underline decoration-[#34d399]/35 underline-offset-2 transition hover:text-[#2bb67f] hover:decoration-[#2bb67f] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgba(52,211,153,0.5)]"
+                      className="font-semibold text-[var(--accent-primary)] underline decoration-[#34d399]/35 underline-offset-2 transition hover:text-[var(--gradient-teal)] hover:decoration-[var(--gradient-teal)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgba(52,211,153,0.5)]"
                     >
                       /in/michael-malis
                     </a>

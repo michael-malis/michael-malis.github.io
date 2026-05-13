@@ -8,7 +8,7 @@ export default function About() {
 
         {/* Section heading */}
         <div className="mt-3 flex items-center gap-4">
-          <div className="h-px w-10 shrink-0 bg-gradient-to-r from-[#78b83f] to-[#2bb67f]" />
+          <div className="h-px w-10 shrink-0 bg-gradient-to-r from-[var(--gradient-lime)] to-[var(--gradient-teal)]" />
           <h2 className="heading-main">About Me</h2>
         </div>
 
@@ -31,7 +31,7 @@ export default function About() {
           {/* Right Column — Highlights */}
           <div className="space-y-4">
             <div className="card-base p-5">
-              <h3 className="mb-2 text-sm font-semibold text-[#2bb67f]">
+              <h3 className="mb-2 text-sm font-semibold text-[var(--gradient-teal)]">
                 📊 Specialization
               </h3>
               <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
@@ -40,7 +40,7 @@ export default function About() {
             </div>
 
             <div className="card-base p-5">
-              <h3 className="mb-2 text-sm font-semibold text-[#2bb67f]">
+              <h3 className="mb-2 text-sm font-semibold text-[var(--gradient-teal)]">
                 🎓 Education
               </h3>
               <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
@@ -49,7 +49,7 @@ export default function About() {
             </div>
 
             <div className="card-base p-5">
-              <h3 className="mb-2 text-sm font-semibold text-[#2bb67f]">
+              <h3 className="mb-2 text-sm font-semibold text-[var(--gradient-teal)]">
                 💡 Mission
               </h3>
               <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">

@@ -88,8 +88,8 @@ export function RegressionProjectionCard() {
 
       {(!isMobileView || legendOpen) && (
         <div className="regression-legend" aria-label="Scene legend">
-          {LEGEND_ITEMS.map((item, i) => (
-            <div key={i} className="regression-legend-item">
+          {LEGEND_ITEMS.map((item) => (
+            <div key={item.sym} className="regression-legend-item">
               <span className={`regression-legend-swatch ${item.cls}`} />
               <span><span className={item.symCls}>{item.sym}</span>{' '}{item.desc}</span>
             </div>

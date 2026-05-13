@@ -114,6 +114,13 @@
   --gradient-primary: linear-gradient(135deg, #31D98B 0%, #10B981 100%);
 
   --color-heading-secondary: #6BE39A;
+
+  /* Gradient pair — section heading decorators, logo, hover accents */
+  --gradient-lime: #78b83f;
+  --gradient-teal: #2bb67f;
+
+  /* Award badge gold */
+  --gold-accent: #C9A94A;
 }
 
 /* ============================================
@@ -499,7 +506,7 @@ body::before {
 }
 
 
-/* Data Science & ML card — optimize tag layout for 2 rows */
+/* Data Science & ML card — optimize tag layout for 2 rows (desktop only) */
 .skill-card-data-science .tag {
   font-size: 0.7rem;
   padding: 0.24rem 0.6rem;
@@ -507,6 +514,18 @@ body::before {
 
 .skill-card-data-science .flex.flex-wrap.gap-2 {
   gap: 4px;
+}
+
+@media (max-width: 768px) {
+  /* Reset data-science tag to standard size — desktop optimization not needed on mobile */
+  .skill-card-data-science .tag {
+    font-size: var(--fs-tag);
+    padding: 0.25rem 0.65rem;
+  }
+
+  .skill-card-data-science .flex.flex-wrap.gap-2 {
+    gap: 0.5rem;
+  }
 }
 
 h1 {
@@ -1217,9 +1236,6 @@ a:not([class]):focus-visible {
     margin-left: auto;
     margin-right: auto;
     padding: 0.22rem 0.6rem;
-    order: 3;
-    width: 100%;
-    justify-content: center;
   }
 
   .regression-equation span {
@@ -1227,14 +1243,11 @@ a:not([class]):focus-visible {
   }
 
   .regression-card-header {
-    padding: 0.75rem 1rem;
-    flex-wrap: wrap;
-    row-gap: 0.35rem;
+    padding: 0.75rem 3rem 0.75rem 1rem;
   }
 
   .regression-card-header p {
     font-size: 0.875rem;
-    flex: 1 1 auto;
   }
 
   .regression-card-footer {
@@ -1568,7 +1581,10 @@ a:not([class]):focus-visible {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: static;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
     flex-shrink: 0;
     pointer-events: auto;
     width: 26px;
@@ -1634,6 +1650,58 @@ a:not([class]):focus-visible {
     font-size: 0.68rem;
     padding: 0.16rem 0.42rem;
   }
+}
+
+/* ============================================
+   NARROW MOBILE OVERRIDES (≤400px)
+============================================ */
+
+@media (max-width: 400px) {
+  /* Allow long button text (e.g. "View Full Report (Hebrew)") to wrap */
+  .btn-primary,
+  .btn-secondary {
+    white-space: normal;
+    text-align: center;
+    padding: 0.55rem 1rem;
+  }
+}
+
+/* ============================================
+   COMPONENT TOKEN CLASSES
+============================================ */
+
+/* Education — degree text */
+.education-degree {
+  color: var(--accent-primary);
+}
+
+/* Education — "In Progress" status badge */
+.education-status-badge {
+  background: rgba(49, 217, 139, 0.10);
+  border: 1px solid rgba(49, 217, 139, 0.35);
+  color: var(--accent-primary);
+}
+
+/* Skills — collaboration badge */
+.skills-collab-badge {
+  background: rgba(49, 217, 139, 0.08);
+  border: 1.5px solid rgba(49, 217, 139, 0.25);
+  color: var(--gradient-teal);
+  letter-spacing: var(--tracking-mono);
+}
+
+.skills-collab-badge:hover {
+  background: rgba(49, 217, 139, 0.12);
+}
+
+/* Honors — achievement badge text + gold glow */
+.award-achievement-badge {
+  color: var(--gold-accent);
+  text-shadow: 0 0 10px rgba(201, 169, 74, 0.22);
+}
+
+.award-achievement-badge-dot {
+  background: rgba(201, 169, 74, 0.65);
 }
 
 @media (prefers-reduced-motion: reduce) {

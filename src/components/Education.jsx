@@ -8,7 +8,7 @@ export default function Education() {
 
         {/* Section heading */}
         <div className="mt-3 flex items-center gap-4">
-          <div className="h-px w-10 shrink-0 bg-gradient-to-r from-[#78b83f] to-[#2bb67f]" />
+          <div className="h-px w-10 shrink-0 bg-gradient-to-r from-[var(--gradient-lime)] to-[var(--gradient-teal)]" />
           <h2 className="heading-main">Education</h2>
         </div>
 
@@ -25,22 +25,16 @@ export default function Education() {
                 </h3>
                 {/* Degree — solid #34d399 second-level, NOT gradient, smaller than institution */}
                 <p
-                  className="mt-1.5 text-base font-semibold"
-                  style={{ color: 'var(--accent-primary)' }}
+                  className="education-degree mt-1.5 text-base font-semibold"
                 >
                   B.Sc. in Data Science &amp; Statistics
                 </p>
               </div>
               {/* In Progress badge — pill style */}
               <span
-                className="shrink-0 inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-semibold"
-                style={{
-                  background: 'rgba(52, 211, 153, 0.1)',
-                  border: '1px solid rgba(52, 211, 153, 0.35)',
-                  color: '#34d399'
-                }}
+                className="education-status-badge shrink-0 inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-semibold"
               >
-                <span className="h-1.5 w-1.5 rounded-full bg-[#34d399] inline-block" />
+                <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent-primary)] inline-block" />
                 In Progress
               </span>
             </div>

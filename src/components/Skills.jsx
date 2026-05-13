@@ -19,7 +19,7 @@ export default function Skills() {
 
         {/* Section heading */}
         <div className="mt-3 flex items-center gap-4">
-          <div className="h-px w-10 shrink-0 bg-gradient-to-r from-[#78b83f] to-[#2bb67f]" />
+          <div className="h-px w-10 shrink-0 bg-gradient-to-r from-[var(--gradient-lime)] to-[var(--gradient-teal)]" />
           <h2 className="heading-main">Skills &amp; Experience</h2>
         </div>
 
@@ -68,15 +68,9 @@ export default function Skills() {
           </p>
           {/* Badge — pill style, intentional */}
           <span
-            className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold transition-all hover:bg-[rgba(52,211,153,0.12)]"
-            style={{
-              background: 'rgba(52, 211, 153, 0.08)',
-              border: '1.5px solid rgba(52, 211, 153, 0.25)',
-              color: '#2bb67f',
-              letterSpacing: 'var(--tracking-mono)'
-            }}
+            className="skills-collab-badge inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold transition-all"
           >
-            <span className="terminal-blink h-2 w-2 rounded-full bg-[#34d399]" />
+            <span className="terminal-blink h-2 w-2 rounded-full bg-[var(--accent-primary)]" />
             Open to collaborations and challenging projects
           </span>
         </div>
