@@ -1,7 +1,7 @@
 ﻿import { useState } from 'react';
 
 const navLinks = [
-  { href: '#about', label: 'About', className: 'nav-link nav-link-about' },
+  { href: '#about', label: 'Profile', className: 'nav-link nav-link-about' },
   { href: '#projects', label: 'Projects', className: 'nav-link nav-link-projects' },
   { href: '#skills', label: 'Skills', className: 'nav-link nav-link-skills' },
   { href: '#contact', label: 'Contact', className: 'nav-link nav-link-contact' },

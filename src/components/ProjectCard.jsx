@@ -27,7 +27,7 @@ export default function ProjectCard({ project }) {
 
       {/* Project title — solid green, below main section headings in hierarchy */}
       <h3
-        className="mt-2.5 text-lg font-bold tracking-tight sm:text-xl project-card-title"
+        className="mt-2.5 project-card-title"
       >
         {project.title}
       </h3>

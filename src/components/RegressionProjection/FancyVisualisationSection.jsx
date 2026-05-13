@@ -65,7 +65,7 @@ export function FancyVisualisationSection() {
         </div>
 
         <p className="regression-visual-description">
-          I like how something as simple and visual as projection can sit at the foundation of machine learning, prediction, and many of the powerful results we see in the real world.
+          I especially like how something as simple and visual as projection can be foundational to machine learning, prediction, and many powerful real-world results.
         </p>
       </div>
     </section>

@@ -1,6 +1,6 @@
 export default function Education() {
   return (
-    <section className="border-b border-[var(--color-border)] px-6 py-10 sm:py-14 lg:py-16">
+    <section id="education" className="scroll-mt-20 border-b border-[var(--color-border)] px-6 py-10 sm:py-14 lg:py-16">
       <div className="mx-auto max-w-6xl">
 
         {/* Section label */}

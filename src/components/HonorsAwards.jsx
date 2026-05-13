@@ -2,7 +2,7 @@ import { awards } from "../data/awards";
 
 export default function HonorsAwards() {
   return (
-    <section id="awards" className="border-b border-[var(--color-border)] px-6 pt-6 pb-10 sm:pt-8 sm:pb-14 lg:pt-10 lg:pb-16">
+    <section id="awards" className="scroll-mt-20 border-b border-[var(--color-border)] px-6 pt-6 pb-10 sm:pt-8 sm:pb-14 lg:pt-10 lg:pb-16">
       <div className="mx-auto max-w-6xl">
 
         {/* Section label */}

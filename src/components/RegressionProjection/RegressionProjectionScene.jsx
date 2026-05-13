@@ -106,11 +106,11 @@ function CameraController({ controlsRef, focusTarget, isMobileView, yHatPoint, y
       enableZoom={true}
       enableDamping
       dampingFactor={0.08}
-      rotateSpeed={isMobileView ? 0.45 : 0.65}
+      rotateSpeed={isMobileView ? 0.45 : 0.45}
       zoomSpeed={0.7}
       minDistance={2}
-      maxDistance={9}
-      autoRotateSpeed={0.2}
+      maxDistance={10}
+      autoRotateSpeed={1}
     />
   );
 }

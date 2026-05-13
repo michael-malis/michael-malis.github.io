@@ -35,7 +35,7 @@ export default function Skills() {
               {/* Header — fixed-height area so description starts at same vertical level */}
               <div className="mb-4 flex items-center gap-3">
                 <span className="shrink-0 text-2xl leading-none">{category.icon}</span>
-                <h3 className="text-base font-bold leading-tight skill-card-title">
+                <h3 className="leading-tight skill-card-title">
                   {category.category}
                 </h3>
               </div>

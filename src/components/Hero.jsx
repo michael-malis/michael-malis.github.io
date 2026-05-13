@@ -2,7 +2,7 @@ import avatar from "../assets/profile-avatar.webp";
 
 export default function Hero() {
   return (
-    <section id="about" className="border-b border-[var(--color-border)] px-6 pt-8 pb-8 sm:pt-10 sm:pb-10 lg:pt-12 lg:pb-12">
+    <section id="about" className="scroll-mt-20 border-b border-[var(--color-border)] px-6 pt-8 pb-8 sm:pt-10 sm:pb-10 lg:pt-12 lg:pb-12">
       <div className="mx-auto max-w-6xl">
 
         {/* Section Label */}
@@ -29,7 +29,8 @@ export default function Hero() {
 
                 {/* Subtitle */}
                 <p
-                  className="mt-2 text-base font-medium text-[var(--accent-primary)]"
+                  className="mt-2 text-base font-medium"
+                  style={{ color: 'var(--color-heading-secondary)', fontSize: '1.15rem' }}
                 >
                   Statistics &amp; Data Science Student · Hebrew University of Jerusalem
                 </p>
