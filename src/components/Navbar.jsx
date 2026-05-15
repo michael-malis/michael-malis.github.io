@@ -1,14 +1,21 @@
-﻿import { useState } from 'react';
+﻿import { useState, useEffect } from 'react';
 
 const navLinks = [
-  { href: '#about', label: 'Profile', className: 'nav-link nav-link-about' },
+  { href: '#skills',   label: 'Skills',   className: 'nav-link nav-link-about'    },
   { href: '#projects', label: 'Projects', className: 'nav-link nav-link-projects' },
-  { href: '#skills', label: 'Skills', className: 'nav-link nav-link-skills' },
-  { href: '#contact', label: 'Contact', className: 'nav-link nav-link-contact' },
+  { href: '#awards',   label: 'Awards',   className: 'nav-link nav-link-skills'   },
+  { href: '#contact',  label: 'Contact',  className: 'nav-link nav-link-contact'  },
 ];
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 768px)');
+    const handler = (e) => { if (e.matches) setIsMenuOpen(false); };
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
 
   const handleLinkClick = () => {
     setIsMenuOpen(false);

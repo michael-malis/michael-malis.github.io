@@ -635,7 +635,7 @@ p {
 }
 
 .nav-link:hover {
-  background: linear-gradient(135deg, #34d399 0%, #2bb67f 100%);
+  background-image: linear-gradient(135deg, #34d399 0%, #2bb67f 100%);
   box-shadow: 0 6px 16px rgba(52, 211, 153, 0.12);
   transform: translateY(-1px);
   border-color: rgba(52, 211, 153, 0.35);
@@ -650,38 +650,33 @@ p {
   transform: translateY(0);
 }
 
-/* Individual nav link colors — green palette progression */
-.nav-link-about {
-  background: linear-gradient(135deg, #527a2b 0%, #45642a 100%);
-}
-
-.nav-link-about:hover {
-  background: linear-gradient(135deg, #5f8e32 0%, #527a2b 100%);
-}
-
-.nav-link-skills {
-  background: linear-gradient(135deg, #1f7a3d 0%, #24783c 100%);
-}
-
-.nav-link-skills:hover {
-  background: linear-gradient(135deg, #2a8a4a 0%, #1f7a3d 100%);
-}
-
-.nav-link-projects {
-  background: linear-gradient(135deg, #2f6e2e 0%, #286528 100%);
-}
-
-.nav-link-projects:hover {
-  background: linear-gradient(135deg, #3a7f35 0%, #2f6e2e 100%);
-}
-
+/* Layer 1: diagonal luminosity overlay (internal light→dark contrast per button)
+   Layer 2: horizontal hue sweep (color contrast between buttons) */
+.nav-link-about,
+.nav-link-projects,
+.nav-link-skills,
 .nav-link-contact {
-  background: linear-gradient(135deg, #14875d 0%, #158156 100%);
+  background-image:
+    linear-gradient(120deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.05) 100%),
+    linear-gradient(90deg, #527a2b 0%, #2f6e2e 33.333%, #1f7a3d 66.666%, #14875d 100%);
+  background-size: 100% 100%, 375% 100%;
 }
 
+.nav-link-about:hover,
+.nav-link-projects:hover,
+.nav-link-skills:hover,
 .nav-link-contact:hover {
-  background: linear-gradient(135deg, #1d9b6d 0%, #14875d 100%);
+  background-image:
+    linear-gradient(120deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.05) 100%),
+    linear-gradient(90deg, #5f8e32 0%, #3a7f35 33.333%, #2a8a4a 66.666%, #1d9b6d 100%);
+  background-size: 100% 100%, 375% 100%;
 }
+
+/* Segment positions: overlay fills button (0 0), hue layer shifts by segment */
+.nav-link-about    { background-position: 0 0, 0% 50%; }
+.nav-link-projects { background-position: 0 0, 33.333% 50%; }
+.nav-link-skills   { background-position: 0 0, 66.666% 50%; }
+.nav-link-contact  { background-position: 0 0, 100% 50%; }
 
 /* ============================================
    MOBILE HAMBURGER MENU
@@ -767,38 +762,31 @@ button:focus-visible {
   transform: translateX(2px);
 }
 
-/* Mobile nav link color variants — matching desktop nav-link colors */
-.mobile-nav-link.nav-link-about {
-  background: linear-gradient(135deg, #527a2b 0%, #45642a 100%);
-}
-
-.mobile-nav-link.nav-link-about:hover {
-  background: linear-gradient(135deg, #5f8e32 0%, #527a2b 100%);
-}
-
-.mobile-nav-link.nav-link-skills {
-  background: linear-gradient(135deg, #1f7a3d 0%, #24783c 100%);
-}
-
-.mobile-nav-link.nav-link-skills:hover {
-  background: linear-gradient(135deg, #2a8a4a 0%, #1f7a3d 100%);
-}
-
-.mobile-nav-link.nav-link-projects {
-  background: linear-gradient(135deg, #2f6e2e 0%, #286528 100%);
-}
-
-.mobile-nav-link.nav-link-projects:hover {
-  background: linear-gradient(135deg, #3a7f35 0%, #2f6e2e 100%);
-}
-
+/* Mobile nav link color variants — same two-layer approach as desktop */
+.mobile-nav-link.nav-link-about,
+.mobile-nav-link.nav-link-projects,
+.mobile-nav-link.nav-link-skills,
 .mobile-nav-link.nav-link-contact {
-  background: linear-gradient(135deg, #14875d 0%, #158156 100%);
+  background-image:
+    linear-gradient(120deg, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.08) 100%),
+    linear-gradient(90deg, #527a2b 0%, #2f6e2e 33.333%, #1f7a3d 66.666%, #14875d 100%);
+  background-size: 100% 100%, 375% 100%;
 }
 
+.mobile-nav-link.nav-link-about:hover,
+.mobile-nav-link.nav-link-projects:hover,
+.mobile-nav-link.nav-link-skills:hover,
 .mobile-nav-link.nav-link-contact:hover {
-  background: linear-gradient(135deg, #1d9b6d 0%, #14875d 100%);
+  background-image:
+    linear-gradient(120deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.05) 100%),
+    linear-gradient(90deg, #5f8e32 0%, #3a7f35 33.333%, #2a8a4a 66.666%, #1d9b6d 100%);
+  background-size: 100% 100%, 375% 100%;
 }
+
+.mobile-nav-link.nav-link-about    { background-position: 0 0, 0% 50%; }
+.mobile-nav-link.nav-link-projects { background-position: 0 0, 33.333% 50%; }
+.mobile-nav-link.nav-link-skills   { background-position: 0 0, 66.666% 50%; }
+.mobile-nav-link.nav-link-contact  { background-position: 0 0, 100% 50%; }
 
 /* Links — accessible and interactive */
 a:not([class]) {
@@ -1700,11 +1688,11 @@ a:not([class]):focus-visible {
 /* Honors — achievement badge text + gold glow */
 .award-achievement-badge {
   color: var(--gold-accent);
-  text-shadow: 0 0 10px rgba(201, 169, 74, 0.22);
+  text-shadow: 0 0 12px rgba(201, 169, 74, 0.40);
 }
 
 .award-achievement-badge-dot {
-  background: rgba(201, 169, 74, 0.65);
+  background: rgba(201, 169, 74, 0.90);
 }
 
 @media (prefers-reduced-motion: reduce) {

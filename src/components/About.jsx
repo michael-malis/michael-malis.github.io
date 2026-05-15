@@ -17,15 +17,30 @@ export default function About() {
 
           {/* Left Column — Bio */}
           <div className="flex flex-col justify-center space-y-5">
-            <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
-              I'm a Statistics, Data Science, and Machine Learning student passionate about transforming data into actionable insights.
-            </p>
-            <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
-              With a strong foundation in statistical analysis, predictive modeling, and programming, I focus on solving real-world problems through data-driven decision-making. My work spans from exploratory analysis to production-ready ML systems.
-            </p>
-            <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
-              I'm particularly interested in time series forecasting, causal inference, and building scalable data pipelines. When I'm not coding, I'm exploring new methodologies or working on personal projects.
-            </p>
+            <div className="flex gap-3">
+              <span className="shrink-0 font-mono font-bold text-[var(--gradient-lime)]">+</span>
+              <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                After making Aliyah to Israel on my own at 18 and completing military service in the Israel Defense Forces, I developed independence, discipline, and adaptability. That background shaped a self-directed approach to my studies, projects, and problem-solving.
+              </p>
+            </div>
+            <div className="flex gap-3">
+              <span className="shrink-0 font-mono font-bold text-[var(--gradient-lime)]">+</span>
+              <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                My academic focus is Statistics and Data Science, with an emphasis on statistical methods, data visualization, and machine learning.
+              </p>
+            </div>
+            <div className="flex gap-3">
+              <span className="shrink-0 font-mono font-bold text-[var(--gradient-lime)]">+</span>
+              <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                My work covers the full analysis cycle, including cleaning data, building statistical models, creating visualizations, and communicating findings using Python, R, SQL, and web technologies.
+              </p>
+            </div>
+            <div className="flex gap-3">
+              <span className="shrink-0 font-mono font-bold text-[var(--gradient-lime)]">+</span>
+              <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                Beyond coursework, I continue exploring ways to make statistical ideas clearer, more visual, and easier to explain. I am also interested in different areas of software development that can support and improve my analytical work.
+              </p>
+            </div>
           </div>
 
           {/* Right Column — Highlights */}
@@ -35,7 +50,7 @@ export default function About() {
                 Specialization
               </h3>
               <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                Statistical inference, predictive modeling, data visualization, and ML system design
+                Statistical inference, regression analysis, data analysis, data visualization, SQL and data manipulation, and applied programming
               </p>
             </div>
 
@@ -50,10 +65,10 @@ export default function About() {
 
             <div className="card-base p-5">
               <h3 className="mb-2 text-sm font-semibold text-[var(--gradient-teal)]">
-                Mission
+                Approach
               </h3>
               <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                Make data science accessible and impactful through clean code and clear communication
+                Apply mathematical concepts to describe real-world problems and support decision-making through clean code, honest visualizations, and readable analysis.
               </p>
             </div>
           </div>

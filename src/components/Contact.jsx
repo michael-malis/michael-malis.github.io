@@ -9,11 +9,8 @@ export default function Contact() {
         {/* Section heading */}
         <div className="mt-3 flex items-center gap-4">
           <div className="h-px w-10 shrink-0 bg-gradient-to-r from-[var(--gradient-lime)] to-[var(--gradient-teal)]" />
-          <h2 className="heading-main">Get In Touch</h2>
+          <h2 className="heading-main">Contact</h2>
         </div>
-        <p className="mt-4 max-w-2xl text-sm text-[var(--color-text-secondary)]">
-          Interested in data science, machine learning, or collaboration opportunities? Let's connect.
-        </p>
 
         <div className="mt-7 card-base p-7">
           <div className="grid gap-6 sm:grid-cols-2">
@@ -47,6 +44,14 @@ export default function Contact() {
             </div>
 
           </div>
+        </div>
+
+        {/* Availability pill — below contact links, centered */}
+        <div className="mt-8 flex justify-center">
+          <span className="skills-collab-badge inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold transition-all">
+            <span className="terminal-blink h-2 w-2 rounded-full bg-[var(--accent-primary)]" />
+            Open to internships, junior roles, and research positions.
+          </span>
         </div>
 
       </div>

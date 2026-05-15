@@ -1,14 +1,16 @@
 export const awards = [
   {
-    title: "Hackathon Award — JEM / JAM",
+    badge: "🏆 Achievement",
+    headline: "1st Place Hackathon Award",
+    title: "JEM / JAM",
     date: "2026",
     description:
-      "Worked as part of a multidisciplinary team on JEM / JAM, an educational project that combines a React web platform, backend functionality, chatbot features, and an electronic sound-synthesis component for learning music coding through a custom programming language.",
+      "Built JEM/JAM as part of a multidisciplinary team. It is an educational music-coding platform with browser-based playback and hardware sound output through an ESP/Arduino-based module. My main work focused on the React web platform and a RAG-powered chatbot that helps children learn programming.",
     details: [
-      "Contributed to both frontend and backend parts of the web platform.",
-      "Helped develop the chatbot-related functionality and educational user experience.",
-      "Worked with the team on connecting the software side of the project to an electronic sound-output component.",
-      "Participated in building and presenting a working demo under hackathon time pressure.",
+      "Built React frontend components and connected the web interface to backend API endpoints.",
+      "Developed the chatbot interaction flow and RAG logic, grounding answers in project learning materials to help children understand the custom music-coding language step by step.",
+      "Supported the team's hardware integration work, connecting the platform to an ESP/Arduino-based sound-synthesis module for audio output.",
+      "Delivered a working demo with full feature integration within the hackathon time limit.",
     ],
     link: "https://github.com/Zer0Hiro/JAM-web-edition",
     buttonText: "View Team Repository",
@@ -21,5 +23,19 @@ export const awards = [
       "Electronics",
       "Music Coding",
     ],
+  },
+  {
+    badge: "🎓 Scholarship",
+    headline: null,
+    title: "Moshal Program Scholar",
+    date: "2023 – present",
+    description: null,
+    details: [
+      "Selected for the Moshal Program, an international scholarship and student development program for high-achieving students.",
+      "Participating in mentorship, training, community events, and professional development activities.",
+    ],
+    link: "https://moshalprogram.org/",
+    buttonText: "Program website",
+    tags: ["Scholarship", "Mentorship", "Professional Development"],
   },
 ];

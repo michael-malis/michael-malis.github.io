@@ -1,14 +1,15 @@
 import { skillCategories } from "../data/skills";
 
+const skillDescriptions = {
+  "Programming & Querying": "Languages I use for data analysis, statistical computing, querying, and automation.",
+  "Statistics & Machine Learning": "Core methods: inference, regression, distribution fitting, parameter estimation, classification, and model evaluation.",
+  "Data Wrangling & Analysis": "Tools and methods I use to clean, reshape, filter, and prepare data for analysis and modeling.",
+  "Visualization & Reporting": "Tools and methods I use to turn statistical analysis into clear charts, notebooks, maps, dashboards, and written reports.",
+  "Interactive & Technical Tools": "Tools I use to build interactive explanations, portfolio demos, and data-oriented web projects.",
+  "Professional Strengths": "Strengths shown through coursework, small-team statistics projects, and independent portfolio work.",
+};
+
 export default function Skills() {
-  const skillDescriptions = {
-    "Programming Languages": "Languages I use for data analysis, automation, academic programming, and web-based projects.",
-    "Data Science & ML": "Statistical and machine learning skills developed through coursework, projects, and practical data analysis.",
-    "Data Engineering & Wrangling": "Tools and methods I use to clean, transform, organize, and prepare data for analysis and modeling.",
-    "Visualization & Tools": "Tools I use to create clear charts, dashboards, and reports that make data easier to understand.",
-    "Web Development": "Frontend technologies I use to build portfolio pages, project interfaces, and interactive learning tools.",
-    "Core Competencies": "Professional strengths that support fast learning, teamwork, problem solving, and project execution."
-  };
 
   return (
     <section id="skills" className="scroll-mt-20 border-b border-[var(--color-border)] px-6 py-10 sm:py-14 lg:py-16">
@@ -20,7 +21,7 @@ export default function Skills() {
         {/* Section heading */}
         <div className="mt-3 flex items-center gap-4">
           <div className="h-px w-10 shrink-0 bg-gradient-to-r from-[var(--gradient-lime)] to-[var(--gradient-teal)]" />
-          <h2 className="heading-main">Skills &amp; Experience</h2>
+          <h2 className="heading-main">Skills</h2>
         </div>
 
         {/* Skills Grid */}
@@ -29,7 +30,7 @@ export default function Skills() {
             <div
               key={idx}
               className={`card-base group flex flex-col p-6 transition-all duration-300 hover:scale-[1.015] ${
-                category.category === "Data Science & ML" ? "skill-card-data-science" : ""
+                category.category === "Statistics & Machine Learning" ? "skill-card-data-science" : ""
               }`}
             >
               {/* Header — fixed-height area so description starts at same vertical level */}
@@ -59,20 +60,6 @@ export default function Skills() {
               <div className="mt-5 h-0.5 w-0 bg-gradient-to-r from-[#34d399] to-[#2bb67f] transition-all duration-300 group-hover:w-full" />
             </div>
           ))}
-        </div>
-
-        {/* Bottom area */}
-        <div className="mt-12 text-center">
-          <p className="mb-6 text-sm text-[var(--color-text-muted)]">
-            Always learning, always building.
-          </p>
-          {/* Badge — pill style, intentional */}
-          <span
-            className="skills-collab-badge inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold transition-all"
-          >
-            <span className="terminal-blink h-2 w-2 rounded-full bg-[var(--accent-primary)]" />
-            Open to collaborations and challenging projects
-          </span>
         </div>
 
       </div>

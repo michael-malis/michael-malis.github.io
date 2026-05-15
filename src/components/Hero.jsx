@@ -38,20 +38,16 @@ export default function Hero() {
                 {/* Meta rows */}
                 <div className="mt-7 space-y-2.5 font-mono text-sm">
                   <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
-                    <span className="shrink-0 font-semibold text-[var(--gradient-lime)]">role:</span>
-                    <span className="text-[var(--color-text-secondary)]">Statistics &amp; Data Science</span>
-                  </div>
-                  <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
-                    <span className="shrink-0 font-semibold text-[var(--gradient-lime)]">education:</span>
-                    <span className="text-[var(--color-text-secondary)]">Hebrew University</span>
-                  </div>
-                  <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
                     <span className="shrink-0 font-semibold text-[var(--gradient-lime)]">focus:</span>
-                    <span className="text-[var(--color-text-secondary)]">ML · Statistics · Data</span>
+                    <span className="text-[var(--color-text-secondary)]">statistics · machine learning · visualization · reports</span>
+                  </div>
+                  <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
+                    <span className="shrink-0 font-semibold text-[var(--gradient-lime)]">status:</span>
+                    <span className="text-[var(--color-text-secondary)]">B.Sc. in progress · 3rd year</span>
                   </div>
                   <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
                     <span className="shrink-0 font-semibold text-[var(--gradient-lime)]">location:</span>
-                    <span className="text-[var(--color-text-secondary)]">Jerusalem</span>
+                    <span className="text-[var(--color-text-secondary)]">Jerusalem, Israel</span>
                   </div>
                 </div>
 

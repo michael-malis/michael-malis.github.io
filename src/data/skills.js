@@ -1,32 +1,32 @@
 export const skillCategories = [
   {
-    category: "Programming Languages",
+    category: "Programming & Querying",
     icon: "💻",
-    skills: ["Python", "R", "VBA", "Bash"]
+    skills: ["Python", "R", "SQL", "VBA", "Bash / PowerShell"]
   },
   {
-    category: "Data Science & ML",
+    category: "Statistics & Machine Learning",
     icon: "🤖",
-    skills: ["Statistical Inference", "Predictive Modeling", "Hypothesis Testing", "Machine Learning Fundamentals", "Scikit-learn", "Statistical Modeling"]
+    skills: ["Statistical Inference", "Hypothesis Testing", "Regression", "Probability", "Classification", "Scikit-learn", "Linear Algebra"]
   },
   {
-    category: "Data Engineering & Wrangling",
+    category: "Data Wrangling & Analysis",
     icon: "⚙️",
-    skills: ["Data Wrangling & Analysis", "Pandas", "NumPy", "Polars", "PySpark", "SQL"]
+    skills: ["Pandas", "NumPy", "Excel / VBA", "SQL", "Data Cleaning", "Text Mining"]
   },
   {
-    category: "Visualization & Tools",
+    category: "Visualization & Reporting",
     icon: "📊",
-    skills: ["Matplotlib", "Seaborn", "Plotly", "Tableau", "PowerBI"]
+    skills: ["ggplot2", "Matplotlib", "Jupyter Notebook", "R Markdown", "Dashboards", "Mapping"]
   },
   {
-    category: "Web Development",
+    category: "Interactive & Technical Tools",
     icon: "🌐",
-    skills: ["React", "JavaScript", "HTML/CSS", "Tailwind CSS", "Vite"]
+    skills: ["React", "JavaScript", "HTML/CSS", "Git", "Interactive Visualization"]
   },
   {
-    category: "Core Competencies",
+    category: "Professional Strengths",
     icon: "⭐",
-    skills: ["Optimization", "Teamwork", "Fast Learning", "Ownership", "Clear Communication"]
+    skills: ["Technical Communication", "Analytical Thinking", "Ownership", "Team Collaboration", "Fast Learning"]
   }
 ];

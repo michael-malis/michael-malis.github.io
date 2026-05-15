@@ -13,10 +13,6 @@ export default function HonorsAwards() {
           <div className="h-px w-10 shrink-0 bg-gradient-to-r from-[var(--gradient-lime)] to-[var(--gradient-teal)]" />
           <h2 className="heading-main">Recognition</h2>
         </div>
-        <p className="mt-4 max-w-2xl text-sm text-[var(--color-text-secondary)]">
-          Achievements and recognition for excellence in data science and machine learning projects.
-        </p>
-
         <div className="mt-10 space-y-8 sm:space-y-10">
           {awards.map((award) => (
             <article
@@ -34,51 +30,63 @@ export default function HonorsAwards() {
                     className="award-achievement-badge inline-flex items-center gap-1.5 rounded-full border border-[rgba(52,211,153,0.22)] bg-[rgba(52,211,153,0.06)] px-3 py-1 font-mono text-xs uppercase tracking-widest"
                   >
                     <span className="award-achievement-badge-dot h-1.5 w-1.5 rounded-full" />
-                    🏆 Achievement
+                    {award.badge}
                   </span>
 
                   {/* Primary headline */}
                   <h3 className="mt-4 text-3xl font-bold tracking-tight text-[var(--accent-primary)] sm:text-4xl">
-                    1st Place Hackathon Award — {award.title.replace("Hackathon Award — ", "")}
+                    {award.headline ? <>{award.headline}{"  ·  "}</> : null}{award.title}
                   </h3>
                 </div>
-                <span className="font-mono text-xl font-semibold text-[var(--color-text-muted)]">{award.date}</span>
+                {award.date && (
+                  <span className="font-mono text-xl font-semibold text-[var(--color-text-muted)]">{award.date}</span>
+                )}
               </div>
 
               {/* Description */}
-              <p className="mt-5 max-w-3xl text-base leading-relaxed text-[var(--color-text-secondary)] sm:text-base">
-                {award.description}
-              </p>
+              {award.description && (
+                <p className="mt-5 max-w-3xl text-base leading-relaxed text-[var(--color-text-secondary)] sm:text-base">
+                  {award.description}
+                </p>
+              )}
 
               {/* Details — two columns */}
-              <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-                {award.details.map((detail, i) => (
-                  <li key={i} className="flex gap-3 text-sm text-[var(--color-text-secondary)]">
-                    <span className="shrink-0 font-mono font-bold text-[var(--gradient-lime)]">+</span>
-                    <span>{detail}</span>
-                  </li>
-                ))}
-              </ul>
+              {award.details.length > 0 && (
+                <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                  {award.details.map((detail, i) => (
+                    <li key={i} className="flex gap-3 text-sm text-[var(--color-text-secondary)]">
+                      <span className="shrink-0 font-mono font-bold text-[var(--gradient-lime)]">+</span>
+                      <span>{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
 
-              {/* Divider before tags */}
-              <div className="divider-green" />
+              {/* Divider before tags — only when there is content below */}
+              {(award.tags.length > 0 || award.link) && (
+                <div className="divider-green" />
+              )}
 
               {/* Tags + Button */}
-              <div className="mt-5 flex flex-wrap items-center justify-between gap-4">
-                <div className="flex flex-wrap gap-2">
-                  {award.tags.map((tag) => (
-                    <span key={tag} className="tag">{tag}</span>
-                  ))}
+              {(award.tags.length > 0 || award.link) && (
+                <div className="mt-5 flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex flex-wrap gap-2">
+                    {award.tags.map((tag) => (
+                      <span key={tag} className="tag">{tag}</span>
+                    ))}
+                  </div>
+                  {award.link && (
+                    <a
+                      href={award.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-secondary shrink-0"
+                    >
+                      {award.buttonText}
+                    </a>
+                  )}
                 </div>
-                <a
-                  href={award.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-secondary shrink-0"
-                >
-                  {award.buttonText}
-                </a>
-              </div>
+              )}
             </article>
           ))}
         </div>

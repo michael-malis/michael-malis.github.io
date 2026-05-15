@@ -53,14 +53,14 @@ export default function App() {
     <div className="relative z-[1] min-h-screen text-white">
       <Navbar />
       <Hero />
+      <About />
+      <Skills />
       <Suspense fallback={<RegressionFallback />}>
         <FancyVisualisationSection />
       </Suspense>
-      <HonorsAwards />
       <Projects />
-      <About />
+      <HonorsAwards />
       <Education />
-      <Skills />
       <Contact />
       <Footer />
     </div>

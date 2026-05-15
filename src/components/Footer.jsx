@@ -9,7 +9,7 @@ export default function Footer() {
           href="https://michael-malis.github.io/portfolio-site/"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-secondary"
+          className="font-mono text-xs text-[var(--color-text-muted)] underline underline-offset-2 hover:text-[var(--color-text-secondary)] transition"
         >
           Previous portfolio version
         </a>

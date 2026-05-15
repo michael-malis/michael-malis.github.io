@@ -41,7 +41,7 @@ export default function Education() {
 
             {/* Description */}
             <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
-              Focused coursework in statistical theory, machine learning algorithms, data engineering, and statistical inference. Developing expertise in predictive modeling and causal analysis.
+              Coursework in statistical theory, machine learning, statistical computing, and statistical inference.
             </p>
 
             {/* Divider before tags */}
@@ -49,7 +49,7 @@ export default function Education() {
 
             {/* Tags — no "Key Areas:" label */}
             <div className="mt-4 flex flex-wrap gap-2">
-              {['Statistical Inference', 'Machine Learning', 'Data Engineering', 'Causal Analysis', 'Time Series'].map((area) => (
+              {['Statistical Inference', 'Machine Learning', 'Statistical Computing', 'Markov Chains', 'Statistical Simulation', 'Regression Analysis'].map((area) => (
                 <span key={area} className="tag">{area}</span>
               ))}
             </div>

@@ -20,7 +20,7 @@ export default function Projects() {
           <h2 className="heading-main">Selected Works</h2>
         </div>
         <p className="mt-4 max-w-2xl text-sm text-[var(--color-text-secondary)]">
-          Data analysis, statistical modeling, and machine learning projects showcasing practical applications.
+          Each project links to the full report.
         </p>
 
         <div className="mt-10 space-y-12 sm:space-y-14">

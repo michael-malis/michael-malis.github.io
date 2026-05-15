@@ -8,7 +8,7 @@ export function FancyVisualisationSection() {
           <p className="section-label">// INTERACTIVE REGRESSION GEOMETRY</p>
           <h2>Linear Regression as Projection</h2>
           <p>
-            A small interactive demo of a geometric idea at the heart of modern data science.
+            An interactive 3D visualization showing linear regression as orthogonal projection onto the column space of X.
           </p>
           <p className="fancy-visualisation-caption">
             <strong className="regression-note-label">note:</strong>{' '}
@@ -65,7 +65,7 @@ export function FancyVisualisationSection() {
         </div>
 
         <p className="regression-visual-description">
-          I especially like how something as simple and visual as projection can be foundational to machine learning, prediction, and many powerful real-world results.
+          I chose to visualize linear regression as a central concept in prediction and machine learning. I find it beautiful how this makes the geometric idea of projection clear.
         </p>
       </div>
     </section>
