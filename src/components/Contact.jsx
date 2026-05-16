@@ -50,7 +50,7 @@ export default function Contact() {
         <div className="mt-8 flex justify-center">
           <span className="skills-collab-badge inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold transition-all">
             <span className="terminal-blink h-2 w-2 rounded-full bg-[var(--accent-primary)]" />
-            Open to internships, junior roles, and research positions.
+            Open to internships, junior data/ML roles, and research assistant positions.
           </span>
         </div>
 

@@ -129,17 +129,29 @@
 
 html {
   scroll-behavior: smooth;
+  background: #020806;
 }
 
+/* CSS fallback — approximates approved image: upper-left forest, upper-right teal, lower-center lime */
 body {
-  background-color: var(--bg-main);
+  background-color: #020806;
   background-image:
-    linear-gradient(160deg,
-      #030e07 0%,
-      #020806 35%,
-      #020c06 60%,
-      #020806 85%,
-      #020806 100%);
+    radial-gradient(ellipse 78% 62% at -8% 2%,
+      rgba(10, 69, 0, 0.52) 0%,
+      rgba(10, 69, 0, 0.28) 28%,
+      rgba(10, 69, 0, 0.08) 54%,
+      transparent 72%),
+    radial-gradient(ellipse 76% 60% at 108% 2%,
+      rgba(0, 168, 107, 0.40) 0%,
+      rgba(0, 168, 107, 0.22) 30%,
+      rgba(0, 168, 107, 0.07) 56%,
+      transparent 74%),
+    radial-gradient(ellipse 72% 52% at 50% 112%,
+      rgba(124, 255, 107, 0.18) 0%,
+      rgba(124, 255, 107, 0.09) 28%,
+      rgba(124, 255, 107, 0.03) 52%,
+      transparent 72%),
+    linear-gradient(180deg, #020604 0%, #030806 100%);
   background-attachment: fixed;
   min-height: 100vh;
   color: var(--text-primary);
@@ -152,18 +164,52 @@ body {
   overflow-x: hidden;
 }
 
-/* Global atmospheric background — subtle layered green-black depth */
+/* Primary background image layer — desktop */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
-  pointer-events: none;
   z-index: 0;
-  background:
-    linear-gradient(135deg, rgba(49, 217, 139, 0.03) 0%, rgba(107, 227, 154, 0.02) 100%),
-    radial-gradient(ellipse 120% 100% at 0% -10%, rgba(49, 217, 139, 0.07) 0%, transparent 60%),
-    radial-gradient(ellipse 110% 90% at 100% 110%, rgba(49, 217, 139, 0.05) 0%, transparent 55%),
-    radial-gradient(ellipse 150% 100% at 50% 50%, rgba(32, 180, 134, 0.02) 0%, transparent 70%);
+  pointer-events: none;
+  background-image: image-set(
+    url('/bg-desktop.avif') type('image/avif'),
+    url('/bg-desktop.webp') type('image/webp')
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@media (max-width: 768px) {
+  body::before {
+    background-image: image-set(
+      url('/bg-mobile.avif') type('image/avif'),
+      url('/bg-mobile.webp') type('image/webp')
+    );
+  }
+}
+
+/* Readability overlay — sits above image, below content */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: rgba(2, 6, 4, 0.28);
+}
+
+@media (max-width: 768px) {
+  body::after {
+    background: rgba(2, 6, 4, 0.38);
+  }
+}
+
+/* App content above all background layers */
+#root {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
 }
 
 /* Selection */
@@ -1693,6 +1739,40 @@ a:not([class]):focus-visible {
 
 .award-achievement-badge-dot {
   background: rgba(201, 169, 74, 0.90);
+}
+
+/* Footer — archive link only */
+.footer-archive-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: rgba(190, 205, 195, 0.72);
+  opacity: 0.82;
+  text-decoration: none;
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease,
+    opacity 160ms ease,
+    text-decoration-color 160ms ease;
+}
+
+.footer-archive-link:hover {
+  color: rgba(225, 245, 230, 0.98);
+  opacity: 1;
+  background-color: rgba(16, 185, 129, 0.10);
+  text-decoration: none;
+}
+
+.footer-archive-link:focus-visible {
+  outline: 1px solid rgba(16, 185, 129, 0.65);
+  outline-offset: 3px;
 }
 
 @media (prefers-reduced-motion: reduce) {

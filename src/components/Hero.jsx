@@ -39,7 +39,7 @@ export default function Hero() {
                 <div className="mt-7 space-y-2.5 font-mono text-sm">
                   <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
                     <span className="shrink-0 font-semibold text-[var(--gradient-lime)]">focus:</span>
-                    <span className="text-[var(--color-text-secondary)]">statistics · machine learning · visualization · reports</span>
+                    <span className="text-[var(--color-text-secondary)]">statistical modeling · machine learning · visualization</span>
                   </div>
                   <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
                     <span className="shrink-0 font-semibold text-[var(--gradient-lime)]">status:</span>

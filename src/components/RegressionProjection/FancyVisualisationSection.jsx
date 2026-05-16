@@ -5,7 +5,7 @@ export function FancyVisualisationSection() {
     <section id="fancy-visualisation" className="fancy-visualisation-section">
       <div className="mx-auto px-6 sm:px-8">
         <div className="fancy-visualisation-header">
-          <p className="section-label">// INTERACTIVE REGRESSION GEOMETRY</p>
+          <p className="section-label">// INTERACTIVE REGRESSION GEOMETRY DEMO</p>
           <h2>Linear Regression as Projection</h2>
           <p>
             An interactive 3D visualization showing linear regression as orthogonal projection onto the column space of X.

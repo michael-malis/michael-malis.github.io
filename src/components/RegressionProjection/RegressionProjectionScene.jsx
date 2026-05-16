@@ -1,5 +1,42 @@
 import { useRef, useEffect, useMemo } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
+
+function VisibilityDriver({ containerRef }) {
+  const { invalidate } = useThree();
+  const frameRef = useRef(null);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const stopLoop = () => {
+      cancelAnimationFrame(frameRef.current);
+      frameRef.current = null;
+    };
+
+    const startLoop = () => {
+      const tick = () => {
+        invalidate();
+        frameRef.current = requestAnimationFrame(tick);
+      };
+      frameRef.current = requestAnimationFrame(tick);
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) startLoop(); else stopLoop(); },
+      { threshold: 0 }
+    );
+    observer.observe(el);
+    startLoop();
+
+    return () => {
+      observer.disconnect();
+      stopLoop();
+    };
+  }, [containerRef, invalidate]);
+
+  return null;
+}
 import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
 import { RegressionGeometry } from './RegressionGeometry';
@@ -118,6 +155,7 @@ function CameraController({ controlsRef, focusTarget, isMobileView, yHatPoint, y
 export function RegressionProjectionScene({ isMobileView, focusTarget, x1, x2, y, onDragX1, onDragX2, onDragY }) {
   const reducedMotion = usePrefersReducedMotion();
   const controlsRef = useRef();
+  const containerRef = useRef();
 
   // Shared interaction state — passed to both CameraController and RegressionGeometry
   const interactionRef = useRef({
@@ -140,8 +178,9 @@ export function RegressionProjectionScene({ isMobileView, focusTarget, x1, x2, y
   }, [x1, x2, y]);
 
   return (
-    <div className="regression-canvas-wrap">
+    <div className="regression-canvas-wrap" ref={containerRef}>
       <Canvas
+        frameloop="demand"
         camera={{
           position: isMobileView ? [3.8, 3.2, 5.5] : [4.5, 4.0, 6.5],
           fov: isMobileView ? 50 : 40,
@@ -161,6 +200,7 @@ export function RegressionProjectionScene({ isMobileView, focusTarget, x1, x2, y
           </div>
         }
       >
+        <VisibilityDriver containerRef={containerRef} />
         <ambientLight intensity={0.7} />
         <directionalLight position={[4, 6, 5]} intensity={1.2} />
         <CameraController

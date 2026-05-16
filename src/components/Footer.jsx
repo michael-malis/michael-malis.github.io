@@ -4,16 +4,16 @@ export default function Footer() {
       <div className="mx-auto mb-6 h-px max-w-xs bg-gradient-to-r from-transparent via-[var(--color-secondary-active)]/30 to-transparent" />
       <p className="font-mono text-xs text-[var(--color-text-muted)]">© 2026 Michael Malis</p>
       <p className="mt-2 font-mono text-xs text-[var(--color-text-muted)]">Built with React, Vite and Tailwind CSS</p>
-      <div className="mt-5">
+      <p className="mt-2">
         <a
           href="https://michael-malis.github.io/portfolio-site/"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-mono text-xs text-[var(--color-text-muted)] underline underline-offset-2 hover:text-[var(--color-text-secondary)] transition"
+          className="footer-archive-link"
         >
-          Previous portfolio version
+          Archive: Previous portfolio version
         </a>
-      </div>
+      </p>
     </footer>
   );
 }

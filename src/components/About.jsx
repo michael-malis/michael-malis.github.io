@@ -20,25 +20,19 @@ export default function About() {
             <div className="flex gap-3">
               <span className="shrink-0 font-mono font-bold text-[var(--gradient-lime)]">+</span>
               <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                After making Aliyah to Israel on my own at 18 and completing military service in the Israel Defense Forces, I developed independence, discipline, and adaptability. That background shaped a self-directed approach to my studies, projects, and problem-solving.
+                I study Statistics and Data Science at the Hebrew University of Jerusalem, with a focus on statistical inference, regression, machine learning fundamentals, and data visualization.
               </p>
             </div>
             <div className="flex gap-3">
               <span className="shrink-0 font-mono font-bold text-[var(--gradient-lime)]">+</span>
               <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                My academic focus is Statistics and Data Science, with an emphasis on statistical methods, data visualization, and machine learning.
+                After making Aliyah independently at 18 and completing military service in the Israel Defense Forces, I developed independence, discipline, and adaptability. That background shaped a self-directed approach to my studies, projects, and problem-solving.
               </p>
             </div>
             <div className="flex gap-3">
               <span className="shrink-0 font-mono font-bold text-[var(--gradient-lime)]">+</span>
               <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                My work covers the full analysis cycle, including cleaning data, building statistical models, creating visualizations, and communicating findings using Python, R, SQL, and web technologies.
-              </p>
-            </div>
-            <div className="flex gap-3">
-              <span className="shrink-0 font-mono font-bold text-[var(--gradient-lime)]">+</span>
-              <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                Beyond coursework, I continue exploring ways to make statistical ideas clearer, more visual, and easier to explain. I am also interested in different areas of software development that can support and improve my analytical work.
+                My coursework and projects cover statistical modeling, Python- and R-based data analysis, SQL fundamentals, regression, hypothesis testing, and building visual explanations of mathematical ideas.
               </p>
             </div>
           </div>
@@ -50,7 +44,7 @@ export default function About() {
                 Specialization
               </h3>
               <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                Statistical inference, regression analysis, data analysis, data visualization, SQL and data manipulation, and applied programming
+                Statistical inference, predictive modeling, and data visualization
               </p>
             </div>
 
@@ -59,7 +53,7 @@ export default function About() {
                 Education
               </h3>
               <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                Hebrew University of Jerusalem · B.Sc. in Data Science &amp; Statistics
+                Hebrew University of Jerusalem · B.Sc. in Statistics &amp; Data Science
               </p>
             </div>
 
@@ -68,7 +62,7 @@ export default function About() {
                 Approach
               </h3>
               <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                Apply mathematical concepts to describe real-world problems and support decision-making through clean code, honest visualizations, and readable analysis.
+                Apply mathematical concepts to describe real-world problems, write clean analytical code, and turn data into readable analysis and practical conclusions.
               </p>
             </div>
           </div>
