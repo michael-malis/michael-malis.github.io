@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 /* ============================================
-   DESIGN TOKEN SYSTEM
+   DESIGN_TOKEN_SYSTEM
 ============================================ */
 
 :root {
@@ -1133,6 +1133,35 @@ a:not([class]):focus-visible {
   min-height: 320px;
   flex: 1;
   overflow: hidden;
+}
+
+.regression-interact-hint {
+  position: absolute;
+  inset: 0;
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.regression-interact-hint span {
+  font-family: var(--font-mono);
+  font-size: var(--fs-tag);
+  color: rgba(107, 227, 154, 0.6);
+  background: rgba(2, 8, 6, 0.5);
+  border: 1px solid rgba(49, 217, 139, 0.2);
+  border-radius: 8px;
+  padding: 0.45rem 1rem;
+  letter-spacing: 0.06em;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.regression-interact-hint:hover span {
+  color: rgba(107, 227, 154, 0.9);
+  border-color: rgba(49, 217, 139, 0.4);
 }
 
 .regression-canvas-wrap canvas {

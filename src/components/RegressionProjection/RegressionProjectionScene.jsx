@@ -1,4 +1,4 @@
-import { useRef, useEffect, useMemo } from 'react';
+import { useRef, useEffect, useMemo, useState } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 
 function VisibilityDriver({ containerRef }) {
@@ -46,7 +46,7 @@ import { getPlaneNormal, projectPointOntoPlane, isValidPlane } from './Regressio
 const ORIGIN = new THREE.Vector3(0, 0, 0);
 const RESUME_DELAY_MS = 2200;
 
-function CameraController({ controlsRef, focusTarget, isMobileView, yHatPoint, yPoint, interactionRef, reducedMotion }) {
+function CameraController({ controlsRef, focusTarget, isMobileView, yHatPoint, yPoint, interactionRef, reducedMotion, active }) {
   const { camera } = useThree();
   const targetPos = useRef(null);
   const targetLook = useRef(null);
@@ -129,7 +129,7 @@ function CameraController({ controlsRef, focusTarget, isMobileView, yHatPoint, y
       camera.position.copy(targetPos.current);
       controls.target.copy(targetLook.current);
       controls.update();
-      controls.enabled = true;
+      if (active) controls.enabled = true;
       targetPos.current = null;
       targetLook.current = null;
     }
@@ -140,10 +140,11 @@ function CameraController({ controlsRef, focusTarget, isMobileView, yHatPoint, y
       ref={controlsRef}
       makeDefault
       enablePan={false}
-      enableZoom={true}
+      enableZoom={active}
+      enableRotate={active}
       enableDamping
       dampingFactor={0.08}
-      rotateSpeed={isMobileView ? 0.45 : 0.45}
+      rotateSpeed={0.45}
       zoomSpeed={0.7}
       minDistance={2}
       maxDistance={10}
@@ -156,6 +157,14 @@ export function RegressionProjectionScene({ isMobileView, focusTarget, x1, x2, y
   const reducedMotion = usePrefersReducedMotion();
   const controlsRef = useRef();
   const containerRef = useRef();
+  const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    if (!active) return;
+    const handler = (e) => { if (e.key === 'Escape') setActive(false); };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [active]);
 
   // Shared interaction state — passed to both CameraController and RegressionGeometry
   const interactionRef = useRef({
@@ -181,6 +190,7 @@ export function RegressionProjectionScene({ isMobileView, focusTarget, x1, x2, y
     <div className="regression-canvas-wrap" ref={containerRef}>
       <Canvas
         frameloop="demand"
+        style={{ pointerEvents: active ? 'auto' : 'none' }}
         camera={{
           position: isMobileView ? [3.8, 3.2, 5.5] : [4.5, 4.0, 6.5],
           fov: isMobileView ? 50 : 40,
@@ -211,6 +221,7 @@ export function RegressionProjectionScene({ isMobileView, focusTarget, x1, x2, y
           yPoint={y}
           interactionRef={interactionRef}
           reducedMotion={reducedMotion}
+          active={active}
         />
         <RegressionGeometry
           isMobileView={isMobileView}
@@ -225,6 +236,15 @@ export function RegressionProjectionScene({ isMobileView, focusTarget, x1, x2, y
           interactionRef={interactionRef}
         />
       </Canvas>
+      {!active && (
+        <div
+          className="regression-interact-hint"
+          onClick={() => setActive(true)}
+          aria-label="Click to interact with 3D demo"
+        >
+          <span>Click to interact</span>
+        </div>
+      )}
     </div>
   );
 }
