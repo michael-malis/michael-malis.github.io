@@ -129,7 +129,7 @@ function CameraController({ controlsRef, focusTarget, isMobileView, yHatPoint, y
       camera.position.copy(targetPos.current);
       controls.target.copy(targetLook.current);
       controls.update();
-      if (active) controls.enabled = true;
+      controls.enabled = true;
       targetPos.current = null;
       targetLook.current = null;
     }
@@ -187,7 +187,12 @@ export function RegressionProjectionScene({ isMobileView, focusTarget, x1, x2, y
   }, [x1, x2, y]);
 
   return (
-    <div className="regression-canvas-wrap" ref={containerRef}>
+    <div
+      className="regression-canvas-wrap"
+      ref={containerRef}
+      onClick={!active ? () => setActive(true) : undefined}
+      style={!active ? { cursor: 'pointer' } : undefined}
+    >
       <Canvas
         frameloop="demand"
         style={{ pointerEvents: active ? 'auto' : 'none' }}
@@ -237,11 +242,7 @@ export function RegressionProjectionScene({ isMobileView, focusTarget, x1, x2, y
         />
       </Canvas>
       {!active && (
-        <div
-          className="regression-interact-hint"
-          onClick={() => setActive(true)}
-          aria-label="Click to interact with 3D demo"
-        >
+        <div className="regression-interact-hint" aria-hidden="true">
           <span>Click to interact</span>
         </div>
       )}

@@ -1137,31 +1137,24 @@ a:not([class]):focus-visible {
 
 .regression-interact-hint {
   position: absolute;
-  inset: 0;
+  bottom: 12px;
+  right: 12px;
   z-index: 15;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  pointer-events: none;
 }
 
 .regression-interact-hint span {
+  display: block;
   font-family: var(--font-mono);
   font-size: var(--fs-tag);
-  color: rgba(107, 227, 154, 0.6);
-  background: rgba(2, 8, 6, 0.5);
-  border: 1px solid rgba(49, 217, 139, 0.2);
+  color: rgba(107, 227, 154, 0.55);
+  background: rgba(2, 8, 6, 0.45);
+  border: 1px solid rgba(49, 217, 139, 0.18);
   border-radius: 8px;
-  padding: 0.45rem 1rem;
+  padding: 0.35rem 0.75rem;
   letter-spacing: 0.06em;
   backdrop-filter: blur(4px);
   pointer-events: none;
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-.regression-interact-hint:hover span {
-  color: rgba(107, 227, 154, 0.9);
-  border-color: rgba(49, 217, 139, 0.4);
 }
 
 .regression-canvas-wrap canvas {
