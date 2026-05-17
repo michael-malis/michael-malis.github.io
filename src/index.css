@@ -133,7 +133,7 @@ html {
 }
 
 body {
-  background-color: #010504;
+  background-color: transparent;
   min-height: 100vh;
   color: var(--text-primary);
   font-family: var(--font-sans);
