@@ -28,7 +28,7 @@ export default function Projects() {
             <div key={section.title}>
               {/* Sub-section header */}
               <div className="flex items-center gap-4">
-                <span className="shrink-0 rounded-md border border-[rgba(52,211,153,0.22)] bg-[rgba(52,211,153,0.06)] px-3 py-1.5 font-mono text-xs uppercase tracking-widest text-[var(--text-muted)]">
+                <span className="shrink-0 rounded-md border border-[rgba(52,211,153,0.22)] bg-[rgba(52,211,153,0.06)] px-3 py-1.5 font-mono text-xs uppercase tracking-widest text-[var(--color-text-secondary)]">
                   {SECTION_LABELS[section.title] ?? section.title.toUpperCase()}
                 </span>
                 <div className="h-px flex-1 bg-gradient-to-r from-[rgba(52,211,153,0.2)] to-transparent" />

@@ -39,7 +39,7 @@
 
   /* Text */
   --text-primary: #EDF4F0;
-  --text-secondary: #B6C5BE;
+  --text-secondary: #d6e7e0;
   --text-muted: #7F938A;
   --text-disabled: #52635B;
 
@@ -99,7 +99,7 @@
   --color-elevated: #092019;
 
   --color-text-primary: #EDF4F0;
-  --color-text-secondary: #B6C5BE;
+  --color-text-secondary: #d6e7e0;
   --color-text-muted: #7F938A;
 
   --color-primary-cta: #31D98B;
@@ -1011,7 +1011,7 @@ a:not([class]):focus-visible {
   border: 1px solid rgba(52, 211, 153, 0.25);
   border-radius: 999px;
   background: rgba(3, 24, 16, 0.55);
-  color: rgba(220, 245, 230, 0.72);
+  color: var(--color-text-secondary);
   font-size: 0.9rem;
   line-height: 1.35;
   font-style: italic;
