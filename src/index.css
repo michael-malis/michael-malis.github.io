@@ -526,6 +526,12 @@ body {
 }
 
 @media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 768px) {
   /* Reset data-science tag to standard size — desktop optimization not needed on mobile */
   .skill-card-data-science .tag {
     font-size: var(--fs-tag);
