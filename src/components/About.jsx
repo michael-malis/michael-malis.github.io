@@ -40,7 +40,7 @@ export default function About() {
           {/* Right Column — Highlights */}
           <div className="space-y-4">
             <div className="card-base p-5">
-              <h3 className="mb-2 text-sm font-semibold text-[var(--gradient-teal)]">
+              <h3 className="mb-2 text-base font-semibold text-[var(--gradient-teal)]">
                 Specialization
               </h3>
               <p className="text-base leading-relaxed text-[var(--color-text-secondary)]">
@@ -49,7 +49,7 @@ export default function About() {
             </div>
 
             <div className="card-base p-5">
-              <h3 className="mb-2 text-sm font-semibold text-[var(--gradient-teal)]">
+              <h3 className="mb-2 text-base font-semibold text-[var(--gradient-teal)]">
                 Education
               </h3>
               <p className="text-base leading-relaxed text-[var(--color-text-secondary)]">
@@ -58,7 +58,7 @@ export default function About() {
             </div>
 
             <div className="card-base p-5">
-              <h3 className="mb-2 text-sm font-semibold text-[var(--gradient-teal)]">
+              <h3 className="mb-2 text-base font-semibold text-[var(--gradient-teal)]">
                 Approach
               </h3>
               <p className="text-base leading-relaxed text-[var(--color-text-secondary)]">

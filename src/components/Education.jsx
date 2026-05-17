@@ -49,7 +49,7 @@ export default function Education() {
 
             {/* Tags — no "Key Areas:" label */}
             <div className="mt-4 flex flex-wrap gap-2">
-              {['Statistical Inference', 'Machine Learning', 'Statistical Computing', 'Markov Chains', 'Statistical Simulation', 'Regression Analysis'].map((area) => (
+              {['Statistical Inference', 'Machine Learning', 'Markov Chains', 'Statistical Simulation', 'Regression Analysis'].map((area) => (
                 <span key={area} className="tag">{area}</span>
               ))}
             </div>

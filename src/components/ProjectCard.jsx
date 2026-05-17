@@ -37,7 +37,7 @@ export default function ProjectCard({ project }) {
       </p>
 
       {project.note && (
-        <p className="mt-3 text-xs italic text-[var(--color-text-muted)]">
+        <p className="mt-3 text-sm italic text-[var(--color-text-muted)]">
           <span className="font-mono font-semibold not-italic text-[#2bb67f]">note:</span>{" "}
           {project.note}
         </p>

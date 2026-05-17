@@ -45,7 +45,7 @@ export const projectSections = [
         note: "This report is written in Hebrew.",
         link: `${import.meta.env.BASE_URL}reports/Spotify-Statistical-Modeling.pdf`,
         buttonText: "View Full Report (Hebrew)",
-        tags: ["Statistical Modeling", "Distributions", "Confidence Intervals"],
+        tags: ["Modeling", "Distributions", "Confidence Intervals"],
       },
     ],
   },
