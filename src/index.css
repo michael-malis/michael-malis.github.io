@@ -132,26 +132,30 @@ html {
   background: #020806;
 }
 
-/* CSS fallback — approximates approved image: upper-left forest, upper-right teal, lower-center lime */
 body {
-  background-color: #020806;
+  background-color: #010504;
   background-image:
-    radial-gradient(ellipse 78% 62% at -8% 2%,
-      rgba(10, 69, 0, 0.52) 0%,
-      rgba(10, 69, 0, 0.28) 28%,
-      rgba(10, 69, 0, 0.08) 54%,
+    linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
+    radial-gradient(ellipse 83% 63% at -5% 7%,
+      rgba(10, 69, 0, 0.70) 0%,
+      rgba(10, 69, 0, 0.35) 28%,
+      rgba(10, 69, 0, 0.10) 54%,
       transparent 72%),
-    radial-gradient(ellipse 76% 60% at 108% 2%,
-      rgba(0, 168, 107, 0.40) 0%,
-      rgba(0, 168, 107, 0.22) 30%,
-      rgba(0, 168, 107, 0.07) 56%,
+    radial-gradient(ellipse 83% 63% at 125% 5%,
+      rgba(0, 168, 107, 0.64) 0%,
+      rgba(0, 168, 107, 0.33) 30%,
+      rgba(0, 168, 107, 0.10) 56%,
       transparent 74%),
-    radial-gradient(ellipse 72% 52% at 50% 112%,
-      rgba(124, 255, 107, 0.18) 0%,
-      rgba(124, 255, 107, 0.09) 28%,
+    linear-gradient(115deg,
+      rgba(10, 69, 0, 0.12) 0%,
+      rgba(0, 100, 60, 0.10) 50%,
+      rgba(0, 168, 107, 0.12) 100%),
+    radial-gradient(ellipse 76% 55% at 50% 108%,
+      rgba(124, 255, 107, 0.25) 0%,
+      rgba(124, 255, 107, 0.12) 28%,
       rgba(124, 255, 107, 0.03) 52%,
       transparent 72%),
-    linear-gradient(180deg, #020604 0%, #030806 100%);
+    linear-gradient(180deg, #010504 0%, #020705 100%);
   background-attachment: fixed;
   min-height: 100vh;
   color: var(--text-primary);
@@ -162,47 +166,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   overflow-x: hidden;
-}
-
-/* Primary background image layer — desktop */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background-image: image-set(
-    url('/bg-desktop.avif') type('image/avif'),
-    url('/bg-desktop.webp') type('image/webp')
-  );
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-@media (max-width: 768px) {
-  body::before {
-    background-image: image-set(
-      url('/bg-mobile.avif') type('image/avif'),
-      url('/bg-mobile.webp') type('image/webp')
-    );
-  }
-}
-
-/* Readability overlay — sits above image, below content */
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background: rgba(2, 6, 4, 0.28);
-}
-
-@media (max-width: 768px) {
-  body::after {
-    background: rgba(2, 6, 4, 0.38);
-  }
 }
 
 /* App content above all background layers */
