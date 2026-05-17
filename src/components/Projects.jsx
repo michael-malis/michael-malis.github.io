@@ -19,7 +19,7 @@ export default function Projects() {
           <div className="h-px w-10 shrink-0 bg-gradient-to-r from-[var(--gradient-lime)] to-[var(--gradient-teal)]" />
           <h2 className="heading-main">Selected Works</h2>
         </div>
-        <p className="mt-4 max-w-2xl text-sm text-[var(--color-text-secondary)]">
+        <p className="mt-4 max-w-2xl text-base text-[var(--color-text-secondary)]">
           Each project links to the full report.
         </p>
 

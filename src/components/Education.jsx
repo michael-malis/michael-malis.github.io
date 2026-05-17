@@ -40,7 +40,7 @@ export default function Education() {
             </div>
 
             {/* Description */}
-            <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+            <p className="text-base leading-relaxed text-[var(--color-text-secondary)]">
               Coursework in statistical theory, machine learning, statistical computing, and statistical inference.
             </p>
 

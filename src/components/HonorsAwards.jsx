@@ -54,7 +54,7 @@ export default function HonorsAwards() {
               {award.details.length > 0 && (
                 <ul className="mt-6 grid gap-3 sm:grid-cols-2">
                   {award.details.map((detail, i) => (
-                    <li key={i} className="flex gap-3 text-sm text-[var(--color-text-secondary)]">
+                    <li key={i} className="flex gap-3 text-base text-[var(--color-text-secondary)]">
                       <span className="shrink-0 font-mono font-bold text-[var(--gradient-lime)]">+</span>
                       <span>{detail}</span>
                     </li>

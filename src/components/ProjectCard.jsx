@@ -32,7 +32,7 @@ export default function ProjectCard({ project }) {
         {project.title}
       </h3>
 
-      <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+      <p className="mt-3 flex-1 text-base leading-relaxed text-[var(--color-text-secondary)]">
         {project.description}
       </p>
 

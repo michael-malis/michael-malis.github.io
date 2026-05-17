@@ -42,7 +42,7 @@ export default function Skills() {
               </div>
 
               {/* Description — fixed min-height for consistent divider positioning */}
-              <p className="mb-5 text-sm leading-relaxed text-[var(--color-text-secondary)]" style={{ minHeight: '4rem' }}>
+              <p className="mb-5 text-base leading-relaxed text-[var(--color-text-secondary)]" style={{ minHeight: '4rem' }}>
                 {skillDescriptions[category.category]}
               </p>
 

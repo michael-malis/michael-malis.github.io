@@ -19,19 +19,19 @@ export default function About() {
           <div className="flex flex-col justify-center space-y-5">
             <div className="flex gap-3">
               <span className="shrink-0 font-mono font-bold text-[var(--gradient-lime)]">+</span>
-              <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+              <p className="text-base leading-relaxed text-[var(--color-text-secondary)]">
                 I study Statistics and Data Science at the Hebrew University of Jerusalem, with a focus on statistical inference, regression, machine learning fundamentals, and data visualization.
               </p>
             </div>
             <div className="flex gap-3">
               <span className="shrink-0 font-mono font-bold text-[var(--gradient-lime)]">+</span>
-              <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+              <p className="text-base leading-relaxed text-[var(--color-text-secondary)]">
                 After making Aliyah independently at 18 and completing military service in the Israel Defense Forces, I developed independence, discipline, and adaptability. That background shaped a self-directed approach to my studies, projects, and problem-solving.
               </p>
             </div>
             <div className="flex gap-3">
               <span className="shrink-0 font-mono font-bold text-[var(--gradient-lime)]">+</span>
-              <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+              <p className="text-base leading-relaxed text-[var(--color-text-secondary)]">
                 My coursework and projects cover statistical modeling, Python- and R-based data analysis, SQL fundamentals, regression, hypothesis testing, and building visual explanations of mathematical ideas.
               </p>
             </div>
@@ -43,7 +43,7 @@ export default function About() {
               <h3 className="mb-2 text-sm font-semibold text-[var(--gradient-teal)]">
                 Specialization
               </h3>
-              <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+              <p className="text-base leading-relaxed text-[var(--color-text-secondary)]">
                 Statistical inference, predictive modeling, and data visualization
               </p>
             </div>
@@ -52,7 +52,7 @@ export default function About() {
               <h3 className="mb-2 text-sm font-semibold text-[var(--gradient-teal)]">
                 Education
               </h3>
-              <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+              <p className="text-base leading-relaxed text-[var(--color-text-secondary)]">
                 Hebrew University of Jerusalem · B.Sc. in Statistics &amp; Data Science
               </p>
             </div>
@@ -61,7 +61,7 @@ export default function About() {
               <h3 className="mb-2 text-sm font-semibold text-[var(--gradient-teal)]">
                 Approach
               </h3>
-              <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+              <p className="text-base leading-relaxed text-[var(--color-text-secondary)]">
                 Apply mathematical concepts to describe real-world problems, write clean analytical code, and turn data into readable analysis and practical conclusions.
               </p>
             </div>
