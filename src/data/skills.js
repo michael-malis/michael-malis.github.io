@@ -7,7 +7,7 @@ export const skillCategories = [
   {
     category: "Statistics & Machine Learning",
     icon: "🤖",
-    skills: ["Statistical Inference", "Hypothesis Testing", "Regression", "Probability", "Classification", "Scikit-learn", "Linear Algebra"]
+    skills: ["Inference", "Hypothesis Testing", "Regression", "Probability", "Classification", "Linear Algebra"]
   },
   {
     category: "Data Wrangling & Analysis",
