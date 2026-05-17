@@ -134,6 +134,22 @@ html {
 
 body {
   background-color: #010504;
+  min-height: 100vh;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
     radial-gradient(ellipse 83% 63% at -5% 7%,
@@ -156,16 +172,6 @@ body {
       rgba(124, 255, 107, 0.03) 52%,
       transparent 72%),
     linear-gradient(180deg, #010504 0%, #020705 100%);
-  background-attachment: fixed;
-  min-height: 100vh;
-  color: var(--text-primary);
-  font-family: var(--font-sans);
-  font-size: var(--fs-body);
-  line-height: var(--lh-body);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  overflow-x: hidden;
 }
 
 /* App content above all background layers */
@@ -525,11 +531,6 @@ body {
   gap: 4px;
 }
 
-@media (max-width: 768px) {
-  body {
-    background-attachment: scroll;
-  }
-}
 
 @media (max-width: 768px) {
   /* Reset data-science tag to standard size — desktop optimization not needed on mobile */
