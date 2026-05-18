@@ -986,6 +986,7 @@ a:not([class]):focus-visible {
   border-bottom: 1px solid var(--color-border);
   padding: clamp(1.25rem, 3.5vw, 2.5rem) 1.5rem 1.5rem;
   margin-top: clamp(0.5rem, 1.5vw, 1rem);
+  scroll-margin-top: 5rem;
 }
 
 .fancy-visualisation-section .mx-auto {
@@ -1290,7 +1291,7 @@ a:not([class]):focus-visible {
   }
 
   .regression-canvas-wrap {
-    min-height: 380px;
+    min-height: 310px;
   }
 
   .regression-equation {
@@ -1315,10 +1316,16 @@ a:not([class]):focus-visible {
 
   .regression-card-header p {
     font-size: 1.0rem;
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: calc(100% - 2.5rem);
   }
 
   .regression-card-footer {
-    bottom: 0.75rem;
+    position: static;
+    padding: 0.5rem 0.75rem 0.55rem;
+    border-top: 1px solid rgba(52, 211, 153, 0.1);
+    background: rgba(2, 6, 4, 0.5);
   }
 
   .regression-tag {
@@ -1335,7 +1342,7 @@ a:not([class]):focus-visible {
   }
 
   .regression-canvas-wrap {
-    min-height: 320px;
+    min-height: 265px;
   }
 }
 
@@ -1709,8 +1716,8 @@ a:not([class]):focus-visible {
   }
 
   .regression-card-footer {
-    bottom: 0.5rem;
     gap: 0.4rem;
+    padding: 0.4rem 0.5rem 0.45rem;
   }
 
   .regression-tag {
