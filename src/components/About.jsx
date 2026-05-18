@@ -35,6 +35,18 @@ export default function About() {
                 My coursework and projects cover statistical modeling, Python- and R-based data analysis, SQL fundamentals, regression, hypothesis testing, and building visual explanations of mathematical ideas.
               </p>
             </div>
+            <div className="flex items-baseline gap-3 pt-1">
+              <span className="shrink-0 font-mono text-sm font-bold uppercase tracking-widest text-[var(--color-muted-green)]">GITHUB:</span>
+              <a
+                href="https://github.com/michael-malis"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-sm font-semibold text-[var(--accent-primary)] underline decoration-[#31D98B]/35 underline-offset-2 transition hover:text-[var(--accent-primary-hover)] hover:decoration-[var(--accent-primary-hover)]"
+                aria-label="GitHub profile: michael-malis"
+              >
+                github.com/michael-malis
+              </a>
+            </div>
           </div>
 
           {/* Right Column — Highlights */}

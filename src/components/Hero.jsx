@@ -55,18 +55,18 @@ export default function Hero() {
                 <div className="divider-green" />
 
                 {/* Contact links */}
-                <div className="space-y-2.5 font-mono text-sm">
-                  <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-3">
-                    <span className="shrink-0 font-semibold text-[var(--color-muted-green)]">EMAIL:</span>
+                <div className="flex flex-wrap gap-x-8 gap-y-4 font-mono text-sm">
+                  <div className="flex flex-col gap-1">
+                    <span className="font-semibold uppercase tracking-widest text-[var(--color-muted-green)]">EMAIL</span>
                     <a
                       href="mailto:mykhailo.malis@gmail.com"
-                      className="break-all font-semibold text-[var(--accent-primary)] underline decoration-[#34d399]/35 underline-offset-2 transition hover:text-[var(--gradient-teal)] hover:decoration-[var(--gradient-teal)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgba(52,211,153,0.5)]"
+                      className="font-semibold text-[var(--accent-primary)] underline decoration-[#34d399]/35 underline-offset-2 transition hover:text-[var(--gradient-teal)] hover:decoration-[var(--gradient-teal)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgba(52,211,153,0.5)]"
                     >
                       mykhailo.malis@gmail.com
                     </a>
                   </div>
-                  <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-3">
-                    <span className="shrink-0 font-semibold text-[var(--color-muted-green)]">LINKEDIN:</span>
+                  <div className="flex flex-col gap-1">
+                    <span className="font-semibold uppercase tracking-widest text-[var(--color-muted-green)]">LINKEDIN</span>
                     <a
                       href="https://www.linkedin.com/in/michael-malis/"
                       target="_blank"
@@ -74,6 +74,18 @@ export default function Hero() {
                       className="font-semibold text-[var(--accent-primary)] underline decoration-[#34d399]/35 underline-offset-2 transition hover:text-[var(--gradient-teal)] hover:decoration-[var(--gradient-teal)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgba(52,211,153,0.5)]"
                     >
                       /in/michael-malis
+                    </a>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="font-semibold uppercase tracking-widest text-[var(--color-muted-green)]">GITHUB</span>
+                    <a
+                      href="https://github.com/michael-malis"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub profile: michael-malis"
+                      className="font-semibold text-[var(--accent-primary)] underline decoration-[#34d399]/35 underline-offset-2 transition hover:text-[var(--gradient-teal)] hover:decoration-[var(--gradient-teal)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgba(52,211,153,0.5)]"
+                    >
+                      /michael-malis
                     </a>
                   </div>
                 </div>

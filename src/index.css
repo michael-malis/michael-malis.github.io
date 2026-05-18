@@ -1135,6 +1135,18 @@ a:not([class]):focus-visible {
   overflow: hidden;
 }
 
+.regression-event-gate {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  touch-action: pan-y;
+  cursor: pointer;
+}
+
+.regression-event-gate.is-active {
+  pointer-events: none;
+}
+
 .regression-interact-hint {
   position: absolute;
   bottom: 12px;
@@ -1161,7 +1173,6 @@ a:not([class]):focus-visible {
   display: block !important;
   width: 100% !important;
   height: 100% !important;
-  touch-action: none;
   cursor: grab;
 }
 

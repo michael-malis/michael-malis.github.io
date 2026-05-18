@@ -187,15 +187,9 @@ export function RegressionProjectionScene({ isMobileView, focusTarget, x1, x2, y
   }, [x1, x2, y]);
 
   return (
-    <div
-      className="regression-canvas-wrap"
-      ref={containerRef}
-      onClick={!active ? () => setActive(true) : undefined}
-      style={!active ? { cursor: 'pointer' } : undefined}
-    >
+    <div className="regression-canvas-wrap" ref={containerRef}>
       <Canvas
         frameloop="demand"
-        style={{ pointerEvents: active ? 'auto' : 'none' }}
         camera={{
           position: isMobileView ? [3.8, 3.2, 5.5] : [4.5, 4.0, 6.5],
           fov: isMobileView ? 50 : 40,
@@ -241,6 +235,12 @@ export function RegressionProjectionScene({ isMobileView, focusTarget, x1, x2, y
           interactionRef={interactionRef}
         />
       </Canvas>
+      {/* Gate absorbs pointer/touch events while inactive, passes through when active */}
+      <div
+        className={`regression-event-gate${active ? ' is-active' : ''}`}
+        onClick={!active ? () => setActive(true) : undefined}
+        aria-hidden="true"
+      />
       {!active && (
         <div className="regression-interact-hint" aria-hidden="true">
           <span>Click to interact</span>

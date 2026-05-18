@@ -13,7 +13,7 @@ export default function Contact() {
         </div>
 
         <div className="mt-7 card-base p-7">
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-3">
 
             {/* Email */}
             <div className="flex flex-col gap-1.5">
@@ -22,7 +22,7 @@ export default function Contact() {
               </span>
               <a
                 href="mailto:mykhailo.malis@gmail.com"
-                className="break-all text-base font-semibold text-[var(--color-text-primary)] underline decoration-[var(--color-muted-green)]/40 underline-offset-2 transition hover:text-[var(--color-bright-green)] hover:decoration-[var(--color-bright-green)]"
+                className="break-all text-base font-semibold text-[var(--accent-primary)] underline decoration-[#34d399]/35 underline-offset-2 transition hover:text-[var(--gradient-teal)] hover:decoration-[var(--gradient-teal)]"
               >
                 mykhailo.malis@gmail.com
               </a>
@@ -37,9 +37,26 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/michael-malis/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-base font-semibold text-[var(--color-text-primary)] underline decoration-[var(--color-muted-green)]/40 underline-offset-2 transition hover:text-[var(--color-bright-green)] hover:decoration-[var(--color-bright-green)]"
+                className="text-base font-semibold text-[var(--accent-primary)] underline decoration-[#34d399]/35 underline-offset-2 transition hover:text-[var(--gradient-teal)] hover:decoration-[var(--gradient-teal)]"
               >
                 /in/michael-malis
+              </a>
+            </div>
+
+
+            {/* GitHub */}
+            <div className="flex flex-col gap-1.5">
+              <span className="font-mono text-sm font-bold uppercase tracking-widest text-[var(--color-muted-green)]">
+                GITHUB:
+              </span>
+              <a
+                href="https://github.com/michael-malis"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-base font-semibold text-[var(--accent-primary)] underline decoration-[#34d399]/35 underline-offset-2 transition hover:text-[var(--gradient-teal)] hover:decoration-[var(--gradient-teal)]"
+                aria-label="GitHub profile: michael-malis"
+              >
+                /michael-malis
               </a>
             </div>
 
