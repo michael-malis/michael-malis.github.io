@@ -5,21 +5,21 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#06101c">
+<meta name="theme-color" content="#08111d">
 <title>Вероятный цвет Луны — 3D-карта</title>
 <style>
-:root{--bg:#06101c;--panel:rgba(8,20,33,.92);--line:#2d4a68;--text:#eef5ff;--muted:#a7b7c9;--accent:#e8b75c}
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Arial,sans-serif}body{overscroll-behavior:none}#scene{position:fixed;inset:0;width:100%;height:100%;touch-action:none}.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:0 14px 40px #0006;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}#top{position:fixed;z-index:5;left:max(10px,env(safe-area-inset-left));right:max(10px,env(safe-area-inset-right));top:max(8px,env(safe-area-inset-top));padding:10px 12px;pointer-events:none}#top h1{font-size:17px;line-height:1.15;margin:0 0 4px}#top p{font-size:11px;line-height:1.35;margin:0;color:var(--muted)}#controls{position:fixed;z-index:7;left:max(10px,env(safe-area-inset-left));right:max(10px,env(safe-area-inset-right));bottom:max(10px,env(safe-area-inset-bottom));padding:11px 12px}.row{display:flex;align-items:center;gap:8px}.lbl{width:56px;flex:none;font-size:12px;color:var(--muted)}.range{flex:1;min-width:0}input[type=range]{width:100%;height:34px;accent-color:var(--accent)}.val{min-width:112px;text-align:right;font-size:12px;font-variant-numeric:tabular-nums}#presets{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:7px}button{min-height:36px;border:1px solid #385574;background:#12243a;color:#eef5ff;border-radius:9px;padding:7px 4px;font-size:10.5px;font-weight:650}button:active{background:#1a3655;transform:scale(.98)}#legend{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:8px}.chip{border:1px solid #334d69;border-radius:9px;padding:6px 3px;text-align:center;font-size:9.8px;line-height:1.12}.dot{display:block;width:14px;height:14px;border-radius:4px;margin:0 auto 4px;box-shadow:0 0 7px currentColor}#note{margin-top:7px;color:var(--muted);font-size:10px;line-height:1.3}#tooltip{position:fixed;display:none;z-index:10;pointer-events:none;min-width:190px;padding:10px 11px;border-radius:12px;background:rgba(4,12,22,.97);border:1px solid #3a5875;box-shadow:0 10px 28px #0008;font-size:12px;line-height:1.4}#tooltip b{font-size:13px}#loading{position:fixed;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;background:#06101c;color:#b8c8d8;font-size:14px}#error{display:none;max-width:320px;text-align:center;padding:20px}@media(min-width:700px){#top{left:18px;right:auto;top:16px;width:720px;padding:14px 16px}#top h1{font-size:20px}#top p{font-size:12px}#controls{left:18px;right:auto;bottom:18px;width:610px;padding:14px 16px}.lbl{width:76px}.val{min-width:160px}button{font-size:11.5px}.chip{font-size:10.5px}}
+:root{--bg:#08111d;--panel:rgba(9,20,34,.92);--line:#334b67;--text:#eef5ff;--muted:#adbdcf;--accent:#e8b75c}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Arial,sans-serif}body{overscroll-behavior:none}#scene{position:fixed;inset:0;width:100%;height:100%;touch-action:none}.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:0 14px 40px #0006;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}#top{position:fixed;z-index:5;left:max(10px,env(safe-area-inset-left));right:max(10px,env(safe-area-inset-right));top:max(8px,env(safe-area-inset-top));padding:10px 12px;pointer-events:none}#top h1{font-size:17px;line-height:1.15;margin:0 0 4px}#top p{font-size:11px;line-height:1.35;margin:0;color:var(--muted)}#controls{position:fixed;z-index:7;left:max(10px,env(safe-area-inset-left));right:max(10px,env(safe-area-inset-right));bottom:max(10px,env(safe-area-inset-bottom));padding:11px 12px}.row{display:flex;align-items:center;gap:8px}.lbl{width:56px;flex:none;font-size:12px;color:var(--muted)}.range{flex:1;min-width:0}input[type=range]{width:100%;height:34px;accent-color:var(--accent)}.val{min-width:112px;text-align:right;font-size:12px;font-variant-numeric:tabular-nums}#presets{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:7px}button{min-height:36px;border:1px solid #405b79;background:#13263d;color:#eef5ff;border-radius:9px;padding:7px 4px;font-size:10.5px;font-weight:650}button:active{background:#1a3655;transform:scale(.98)}#legend{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:8px}.chip{border:1px solid #3b536f;border-radius:9px;padding:6px 3px;text-align:center;font-size:9.8px;line-height:1.12}.dot{display:block;width:15px;height:15px;border-radius:4px;margin:0 auto 4px;box-shadow:0 0 10px currentColor}#note{margin-top:7px;color:var(--muted);font-size:10px;line-height:1.3}#tooltip{position:fixed;display:none;z-index:10;pointer-events:none;min-width:190px;padding:10px 11px;border-radius:12px;background:rgba(4,12,22,.97);border:1px solid #3a5875;box-shadow:0 10px 28px #0008;font-size:12px;line-height:1.4}#tooltip b{font-size:13px}#loading{position:fixed;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;background:#08111d;color:#b8c8d8;font-size:14px}#error{display:none;max-width:320px;text-align:center;padding:20px}@media(min-width:700px){#top{left:18px;right:auto;top:16px;width:760px;padding:14px 16px}#top h1{font-size:20px}#top p{font-size:12px}#controls{left:18px;right:auto;bottom:18px;width:620px;padding:14px 16px}.lbl{width:76px}.val{min-width:160px}button{font-size:11.5px}.chip{font-size:10.5px}}
 </style>
 </head>
 <body>
 <div id="scene"></div>
-<div id="top" class="panel"><h1>Вероятный цвет Луны вечером</h1><p>Интерактивная концептуальная модель: широта + сезон → наиболее вероятный оттенок. Один палец — вращение, два — масштаб.</p></div>
+<div id="top" class="panel"><h1>Вероятный цвет Луны вечером</h1><p>Нейтральная Земля и контрастные цветовые зоны. Около равноденствий полосы почти симметричны относительно экватора.</p></div>
 <div id="controls" class="panel">
   <div class="row"><div class="lbl">Дата</div><div class="range"><input id="day" type="range" min="1" max="365" value="172"></div><div id="dateVal" class="val"></div></div>
   <div id="presets"><button data-day="80">Март</button><button data-day="172">Июнь</button><button data-day="266">Сент.</button><button data-day="355">Дек.</button><button id="reset">Сброс</button></div>
-  <div id="legend"><div class="chip"><span class="dot" style="color:#c8e4ff;background:#c8e4ff"></span>Белая</div><div class="chip"><span class="dot" style="color:#f1dfab;background:#f1dfab"></span>Кремовая</div><div class="chip"><span class="dot" style="color:#ffd24a;background:#ffd24a"></span>Жёлтая</div><div class="chip"><span class="dot" style="color:#ff813d;background:#ff813d"></span>Оранжевая</div></div>
-  <div id="note">Цветовые зоны дискретные. Береговые линии и границы стран рисуются поверх зон. Тап по Земле показывает широту и категорию.</div>
+  <div id="legend"><div class="chip"><span class="dot" style="color:#d9edff;background:#d9edff"></span>Белая</div><div class="chip"><span class="dot" style="color:#f1dca0;background:#f1dca0"></span>Кремовая</div><div class="chip"><span class="dot" style="color:#ffc51f;background:#ffc51f"></span>Жёлтая</div><div class="chip"><span class="dot" style="color:#ff6823;background:#ff6823"></span>Оранжевая</div></div>
+  <div id="note">Это концептуальная вероятностная модель. В равноденствие: белая зона у экватора, затем кремовая и жёлтая — почти зеркально в обоих полушариях. Сезон сдвигает полосы теплее в летнем полушарии и холоднее в зимнем.</div>
 </div>
 <div id="tooltip"></div><div id="loading">Загрузка карты Земли…<div id="error"></div></div>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
@@ -36,44 +36,63 @@ try{
   const land=world.objects.land?topojson.feature(world,world.objects.land):countries;
   const borders=topojson.mesh(world,world.objects.countries,(a,b)=>a!==b);
 
-  const W=2048,H=1024, map=document.createElement('canvas'); map.width=W;map.height=H;
+  const W=2048,H=1024,map=document.createElement('canvas');map.width=W;map.height=H;
   const ctx=map.getContext('2d');
   const proj=d3.geoEquirectangular().translate([W/2,H/2]).scale(W/(2*Math.PI)).precision(.1);
   const path=d3.geoPath(proj,ctx);
   const dayEl=document.getElementById('day'),dateVal=document.getElementById('dateVal');
 
-  function warmIndex(lat,d){const r=lat*Math.PI/180,a=Math.abs(Math.sin(r)),dec=Math.sin(2*Math.PI*(d-80)/365),hemi=lat>=0?1:-1;return Math.max(0,Math.min(1,.08+(.20+.58*hemi*dec)*a))}
+  function warmIndex(lat,d){
+    const r=lat*Math.PI/180;
+    const a=Math.abs(Math.sin(r));
+    const decl=Math.sin(2*Math.PI*(d-80)/365);
+    const hemi=lat>=0?1:-1;
+    return Math.max(0,Math.min(1,.08+(.62+.22*hemi*decl)*a));
+  }
   function cat(w){return w<.22?0:w<.48?1:w<.74?2:3}
-  const zoneRGBA=['rgba(200,228,255,.32)','rgba(241,223,171,.34)','rgba(255,210,74,.34)','rgba(255,129,61,.36)'];
+  const zoneRGBA=['rgba(217,237,255,.58)','rgba(241,220,160,.64)','rgba(255,197,31,.72)','rgba(255,104,35,.78)'];
   const catNames=['Белая / холодно-белая','Кремовая','Жёлтая','Оранжевая'];
 
   function redrawTexture(day){
     ctx.setTransform(1,0,0,1,0,0);ctx.clearRect(0,0,W,H);
-    ctx.fillStyle='#155b86';ctx.fillRect(0,0,W,H);
-    ctx.beginPath();path(land);ctx.fillStyle='#6d8d58';ctx.fill();
 
+    // Neutral geographical base
+    ctx.fillStyle='#737c86';ctx.fillRect(0,0,W,H);
+    ctx.beginPath();path(land);ctx.fillStyle='#c8ccd0';ctx.fill();
+
+    // Discrete latitude zones drawn over both ocean and land
     let start=0,prev=cat(warmIndex(90,day));
     for(let y=1;y<=H;y++){
-      const lat=90-(y/H)*180,now=y===H?-1:cat(warmIndex(lat,day));
-      if(now!==prev){ctx.fillStyle=zoneRGBA[prev];ctx.fillRect(0,start,W,y-start);if(y<H){ctx.fillStyle='rgba(4,12,22,.78)';ctx.fillRect(0,y-2,W,4)}start=y;prev=now}
+      const lat=90-(y/H)*180;
+      const now=y===H?-1:cat(warmIndex(lat,day));
+      if(now!==prev){
+        ctx.fillStyle=zoneRGBA[prev];ctx.fillRect(0,start,W,y-start);
+        if(y<H){ctx.fillStyle='rgba(17,22,29,.88)';ctx.fillRect(0,y-3,W,6)}
+        start=y;prev=now;
+      }
     }
 
+    // Geography is redrawn on top for maximum legibility
     ctx.lineJoin='round';ctx.lineCap='round';
-    ctx.beginPath();path(land);ctx.strokeStyle='rgba(255,255,244,.98)';ctx.lineWidth=2.4;ctx.stroke();
-    ctx.beginPath();path(borders);ctx.strokeStyle='rgba(255,255,244,.88)';ctx.lineWidth=1.25;ctx.stroke();
-    for(const lat of [-60,-30,0,30,60]){const y=(90-lat)/180*H;ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.strokeStyle='rgba(210,235,248,.18)';ctx.lineWidth=.8;ctx.setLineDash([8,8]);ctx.stroke()}ctx.setLineDash([]);
+    ctx.beginPath();path(land);ctx.strokeStyle='rgba(255,255,255,.98)';ctx.lineWidth=2.8;ctx.stroke();
+    ctx.beginPath();path(borders);ctx.strokeStyle='rgba(50,57,65,.96)';ctx.lineWidth=1.45;ctx.stroke();
+
+    for(const lat of [-60,-30,0,30,60]){
+      const y=(90-lat)/180*H;ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);
+      ctx.strokeStyle='rgba(35,43,52,.26)';ctx.lineWidth=.9;ctx.setLineDash([9,9]);ctx.stroke();
+    }
+    ctx.setLineDash([]);
     tex.needsUpdate=true;
   }
 
-  const scene=new THREE.Scene();scene.background=new THREE.Color(0x06101c);
+  const scene=new THREE.Scene();scene.background=new THREE.Color(0x08111d);
   const camera=new THREE.PerspectiveCamera(42,innerWidth/innerHeight,.1,100);camera.position.set(0,0,innerHeight>innerWidth?3.8:3.15);
-  const renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.8));renderer.setSize(innerWidth,innerHeight);renderer.outputEncoding=THREE.sRGBEncoding;document.getElementById('scene').appendChild(renderer.domElement);
-  renderer.domElement.style.touchAction='none';
+  const renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.8));renderer.setSize(innerWidth,innerHeight);renderer.outputEncoding=THREE.sRGBEncoding;document.getElementById('scene').appendChild(renderer.domElement);renderer.domElement.style.touchAction='none';
 
   const tex=new THREE.CanvasTexture(map);tex.encoding=THREE.sRGBEncoding;tex.minFilter=THREE.LinearFilter;tex.magFilter=THREE.LinearFilter;
   const globe=new THREE.Mesh(new THREE.SphereGeometry(1,96,64),new THREE.MeshBasicMaterial({map:tex}));scene.add(globe);
   globe.rotation.y=-.35;globe.rotation.z=-23.4*Math.PI/180;
-  const atmosphere=new THREE.Mesh(new THREE.SphereGeometry(1.018,72,48),new THREE.MeshBasicMaterial({color:0x5aa9e6,transparent:true,opacity:.055,side:THREE.BackSide}));scene.add(atmosphere);
+  const atmosphere=new THREE.Mesh(new THREE.SphereGeometry(1.018,72,48),new THREE.MeshBasicMaterial({color:0x8fb9d6,transparent:true,opacity:.045,side:THREE.BackSide}));scene.add(atmosphere);
 
   const controls=new THREE.OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.07;controls.enablePan=false;controls.minDistance=1.85;controls.maxDistance=5.3;controls.rotateSpeed=.65;controls.zoomSpeed=.8;
   function reset(){camera.position.set(0,0,innerHeight>innerWidth?3.8:3.15);controls.target.set(0,0,0);globe.rotation.set(0,-.35,-23.4*Math.PI/180);controls.update()}
