@@ -58,12 +58,9 @@ try{
 
   function redrawTexture(day){
     ctx.setTransform(1,0,0,1,0,0);ctx.clearRect(0,0,W,H);
-
-    // Strictly neutral base map: grayscale water and land.
     ctx.fillStyle='#686f77';ctx.fillRect(0,0,W,H);
     ctx.beginPath();path(land);ctx.fillStyle='#c7cbd0';ctx.fill();
 
-    // Strong discrete belts. No continuous gradient exists between categories.
     let start=0,prev=cat(warmIndex(90,day));
     for(let y=1;y<=H;y++){
       const lat=90-(y/H)*180;
@@ -75,7 +72,6 @@ try{
       }
     }
 
-    // Coastlines and borders are drawn last so geography never disappears under the belts.
     ctx.lineJoin='round';ctx.lineCap='round';
     ctx.beginPath();path(land);ctx.strokeStyle='rgba(255,255,255,1)';ctx.lineWidth=3.0;ctx.stroke();
     ctx.beginPath();path(borders);ctx.strokeStyle='rgba(65,69,74,.98)';ctx.lineWidth=1.55;ctx.stroke();
@@ -96,7 +92,30 @@ try{
   const atmosphere=new THREE.Mesh(new THREE.SphereGeometry(1.018,72,48),new THREE.MeshBasicMaterial({color:0xaec3d4,transparent:true,opacity:.035,side:THREE.BackSide}));scene.add(atmosphere);
 
   const controls=new THREE.OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.07;controls.enablePan=false;controls.minDistance=1.85;controls.maxDistance=5.3;controls.rotateSpeed=.65;controls.zoomSpeed=.8;
-  function reset(){camera.position.set(0,0,innerHeight>innerWidth?3.9:3.2);controls.target.set(0,0,0);globe.rotation.set(0,-.35,0);controls.update()}
+
+  function geoVector(latDeg,lonDeg){
+    const lat=THREE.MathUtils.degToRad(latDeg);
+    const lon=THREE.MathUtils.degToRad(lonDeg);
+    return new THREE.Vector3(
+      Math.cos(lat)*Math.cos(lon),
+      Math.sin(lat),
+      -Math.cos(lat)*Math.sin(lon)
+    ).normalize();
+  }
+
+  function setView(lat,lon){
+    globe.rotation.set(0,0,0);
+    atmosphere.rotation.set(0,0,0);
+    const distance=innerHeight>innerWidth?3.9:3.2;
+    const v=geoVector(lat,lon).multiplyScalar(distance);
+    camera.up.set(0,1,0);
+    camera.position.copy(v);
+    controls.target.set(0,0,0);
+    camera.lookAt(0,0,0);
+    controls.update();
+  }
+
+  function reset(){setView(18,20)}
   document.getElementById('reset').onclick=reset;
 
   function dayOfYear(dt){const start=new Date(dt.getFullYear(),0,0);return Math.floor((dt-start)/(1000*60*60*24))}
@@ -105,20 +124,34 @@ try{
   dayEl.addEventListener('input',update);document.querySelectorAll('[data-day]').forEach(b=>b.onclick=()=>{dayEl.value=b.dataset.day;update()});
   document.getElementById('today').onclick=()=>{dayEl.value=dayOfYear(new Date());update()};
 
-  function setView(lat,lon){
-    controls.reset();
-    camera.position.set(0,0,innerHeight>innerWidth?3.9:3.2);
-    controls.target.set(0,0,0);
-    globe.rotation.set(-THREE.MathUtils.degToRad(lat),-THREE.MathUtils.degToRad(lon)-Math.PI/2,0);
-    controls.update();
-  }
   document.getElementById('israel').onclick=()=>setView(31.5,35.0);
   document.getElementById('equator').onclick=()=>setView(0,20);
-  document.getElementById('north').onclick=()=>setView(58,20);
+  document.getElementById('north').onclick=()=>setView(62,20);
 
   const ray=new THREE.Raycaster(),pointer=new THREE.Vector2(),tt=document.getElementById('tooltip');let down=null;
   renderer.domElement.addEventListener('pointerdown',e=>down={x:e.clientX,y:e.clientY,t:performance.now()});
-  renderer.domElement.addEventListener('pointerup',e=>{if(!down)return;const moved=Math.hypot(e.clientX-down.x,e.clientY-down.y);if(moved<9&&performance.now()-down.t<450){const r=renderer.domElement.getBoundingClientRect();pointer.x=((e.clientX-r.left)/r.width)*2-1;pointer.y=-((e.clientY-r.top)/r.height)*2+1;ray.setFromCamera(pointer,camera);const hit=ray.intersectObject(globe)[0];if(hit){const p=globe.worldToLocal(hit.point.clone()).normalize();const lat=Math.asin(p.y)*180/Math.PI;const lon=Math.atan2(p.z,p.x)*180/Math.PI;const w=warmIndex(lat,+dayEl.value);tt.innerHTML=`<b>${catNames[cat(w)]}</b><br>Широта: ${lat.toFixed(1)}°<br>Долгота: ${lon.toFixed(1)}°<br>Индекс модели: ${Math.round(w*100)}/100`;tt.style.left=Math.max(8,Math.min(e.clientX+10,innerWidth-245))+'px';tt.style.top=Math.max(8,Math.min(e.clientY-45,innerHeight-130))+'px';tt.style.display='block'}else tt.style.display='none'}down=null});
+  renderer.domElement.addEventListener('pointerup',e=>{
+    if(!down)return;
+    const moved=Math.hypot(e.clientX-down.x,e.clientY-down.y);
+    if(moved<9&&performance.now()-down.t<450){
+      const r=renderer.domElement.getBoundingClientRect();
+      pointer.x=((e.clientX-r.left)/r.width)*2-1;
+      pointer.y=-((e.clientY-r.top)/r.height)*2+1;
+      ray.setFromCamera(pointer,camera);
+      const hit=ray.intersectObject(globe)[0];
+      if(hit){
+        const p=globe.worldToLocal(hit.point.clone()).normalize();
+        const lat=Math.asin(p.y)*180/Math.PI;
+        const lon=-Math.atan2(p.z,p.x)*180/Math.PI;
+        const w=warmIndex(lat,+dayEl.value);
+        tt.innerHTML=`<b>${catNames[cat(w)]}</b><br>Широта: ${lat.toFixed(1)}°<br>Долгота: ${lon.toFixed(1)}°<br>Индекс модели: ${Math.round(w*100)}/100`;
+        tt.style.left=Math.max(8,Math.min(e.clientX+10,innerWidth-245))+'px';
+        tt.style.top=Math.max(8,Math.min(e.clientY-45,innerHeight-130))+'px';
+        tt.style.display='block';
+      } else tt.style.display='none';
+    }
+    down=null;
+  });
 
   addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.8));renderer.setSize(innerWidth,innerHeight)});
   dayEl.value=dayOfYear(new Date());update();setView(31.5,35.0);load.style.display='none';
