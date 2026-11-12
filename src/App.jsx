@@ -5,6 +5,7 @@ import About from "./components/About";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import InteractiveLab from "./components/InteractiveLab";
 import HonorsAwards from "./components/HonorsAwards";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -58,6 +59,7 @@ export default function App() {
       <Suspense fallback={<RegressionFallback />}>
         <FancyVisualisationSection />
       </Suspense>
+      <InteractiveLab />
       <Projects />
       <HonorsAwards />
       <Education />
