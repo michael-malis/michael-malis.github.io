@@ -22,11 +22,10 @@ export const demos = [
   },
   {
     id: "complex-rhythm",
-    draft: true, // work in progress — not shown on the site until set to false
     title: "Roots / Rhythm",
     label: "AUDIO",
     description:
-      "A mathematical rhythm workbench: rhythms built from complex roots of unity and their unions.",
+      "A playable mathematical instrument: four lanes play the n-th roots of complex numbers as evenly spaced hits on a loop, with a Lab view for unions, timing and sound.",
     url: "https://michael-malis.github.io/complex-rhythm/",
     source: "https://github.com/michael-malis/complex-rhythm",
   },
